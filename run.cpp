@@ -1,10 +1,27 @@
-#include "Face.h"
-#include "Vec3.h"
-#include <stdio>
+#include "Vertex.h"
+#include "Triangle.h"
+#include <iostream>
+#include <fstream>
 #include <List>
-int main(){
-    List<Vertex *> vertices;
-    List<Triangle *> triangles;
-    cout << "lets go" << endl;
-    int fd = open();
+#include <string>
+
+using namespace std::cout;
+using namespace std::list;
+
+int main () {
+    list<Vertex *> vertices;
+    list<Triangle *> triangles;
+    string line;
+    ifstream myfile ("bunny.obj");
+    if (myfile.is_open())
+    {
+        while ( getline (myfile,line) )
+        {
+            cout << line << endl;
+        }
+        myfile.close();
+    }
+    else cout << "Unable to open file"; 
+
+    return 0;
 }

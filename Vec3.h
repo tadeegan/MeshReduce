@@ -1,12 +1,15 @@
+#ifndef VEC3_H
+#define VEC3_H
+
 class Vec3{
     public:
         Vec3(float x, float y, float z);
-
-    private:
         float x;
         float y;
         float z;
-
-        void copy(const Vec3 &source);
-        void clear();
+        Vec3();
+        Vec3 operator+(Vec3 const & other);
+    private:
 };
+
+#endif

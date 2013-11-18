@@ -9,6 +9,8 @@ class Vec3{
         float z;
         Vec3();
         Vec3 operator+(Vec3 const & other);
+        Vec3 operator-(Vec3 const & other);
+        Vec3 operator*(Vec3 const & other);
     private:
 };
 

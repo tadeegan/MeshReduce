@@ -13,3 +13,11 @@ Vec3 Vec3::operator+(Vec3 const & other){
     Vec3 temp(other.x + this->x, other.y + this->y, other.z + this->z);
     return temp;
 }
+
+Vec3 Vec3::operator-(Vec3 const & other){
+    Vec3 temp(this.x - other->x, this.y - other->y, this.z - other->z);
+    return temp;
+}
+Vec3 Vec3::operator*(Vec3 const & other){
+
+}

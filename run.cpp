@@ -1,14 +1,14 @@
-#include "Vertex.h"
-#include "Triangle.h"
+#include "vertex.h"
+#include "triangle.h"
+#include "vector.h"
+#include "list.h"
 #include <iostream>
 #include <fstream>
-#include <List>
 #include <string>
+#include <vector>
 
-using namespace std;
-
-vector<Vertex *> vertices;
-vector<Triangle *> triangles;
+List<Vertex *> vertices;
+List<Triangle *> triangles;
 
 unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)
 {
@@ -17,7 +17,7 @@ unsigned int splitString(const std::string &txt, std::vector<std::string> &strs,
     strs.clear();
 
     // Decompose statement
-    while( pos != string::npos ) {
+    while( pos != std::string::npos ) {
         strs.push_back( txt.substr( initialPos, pos - initialPos + 1 ) );
         initialPos = pos + 1;
 
@@ -29,21 +29,21 @@ unsigned int splitString(const std::string &txt, std::vector<std::string> &strs,
 
     return strs.size();
 }
-Vertex * validateAndCreateVertex(vector<string> strings){
+Vertex * validateAndCreateVertex(std::vector<std::string> strings, int id){
     if(strings.size() != 4){
-        cout << "invalid vertex size!" << endl;
+        std::cout << "invalid vertex size!" << std::endl;
         return NULL;
     }
     float _x = ::atof(strings[0].c_str());
     float _y = ::atof(strings[0].c_str());
     float _z = ::atof(strings[0].c_str());
-
-    Vertex * v = new Vertex(_x, _y, _z, 1);
+    Vector a(_x, _y, _z);
+    Vertex * v = new Vertex(a, id);
     return v;
 }
 
-void parsePolyLine(string line){
-    vector<string> stringSplits;
+void parsePolyLine(std::string line){
+    std::vector<std::string> stringSplits;
     splitString(line, stringSplits, ' ');
     int num_verts = stringSplits.size() - 1;
     int indicies[num_verts];
@@ -53,31 +53,34 @@ void parsePolyLine(string line){
 
     int num_traingles = num_verts - 2;
     for(int i = 0; i < num_traingles; i++){
-        cout << line << endl;
-        cout << "making triangle: " << indicies[0] << " " << indicies[1+i] << " " << indicies[2+i] << endl;
+        std::cout << line << std::endl;
+        std::cout << "making triangle: " << indicies[0] << " " << indicies[1+i] << " " << indicies[2+i] << std::endl;
         Triangle * temp = new Triangle(vertices[indicies[0]], vertices[indicies[1+i]], vertices[indicies[2+i]]);
-        triangles.push_back(temp);
+        triangles.Add(temp);
     }
 }
 
 int main () {
+    int numVerts = 1;
+
     std::cout << "decimating file" << std::endl;
  
-    string line;
-    ifstream myfile ("bunny.obj");
+    std::string line;
+    std::ifstream myfile ("bunny.obj");
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )
         {
-            //std::cout << line << std::endl;
+            //std::std::cout << line << std::std::endl;
             if(line[0] == 'f'){
                 parsePolyLine(line);
             }
             else if(line[0] == 'v'){
-                vector<string> stringSplits;
+                std::vector<std::string> stringSplits;
                 splitString(line, stringSplits, ' ');
-                Vertex * temp = validateAndCreateVertex(stringSplits);
-                vertices.push_back(temp);
+                Vertex * temp = validateAndCreateVertex(stringSplits, numVerts);
+                numVerts++;
+                vertices.Add(temp);
             }
         }
         myfile.close();
@@ -85,6 +88,7 @@ int main () {
     else{
         std::cout << "Unable to open file"; 
     }
+    //reduce
 
     return 0;
 }

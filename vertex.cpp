@@ -1,19 +1,28 @@
 #include "vertex.h"
+#include "list.h"
 #include <iostream>
 
+extern List<Vertex *> vertices;
 
-Vertex::Vertex(){
-    this->position = Vec3(0,0,0);
+Vertex::Vertex(Vector v,int _id) {
+    position =v;
+    id=_id;
+    vertices.Add(this);
 }
-Vertex::Vertex(float x, float y, float z, int _id){
-    id = _id;
-    position = Vec3(x, y, z);
-}
+
 Vertex::~Vertex(){
-    //do something.... maybe?
+    assert(face.num==0);
+    while(neighbor.num) {
+        neighbor[0]->neighbor.Remove(this);
+        neighbor.Remove(neighbor[0]);
+    }
+    vertices.Remove(this);
 }
-
-void Vertex::RemoveIfNonNeighbor(Vertex *n){
-    std::cout << "RemoveIfNonNeighbor" << std::endl;
-    return;
+void Vertex::RemoveIfNonNeighbor(Vertex *n) {
+    // removes n from neighbor list if n isn't a neighbor.
+    if(!neighbor.Contains(n)) return;
+    for(int i=0;i<face.num;i++) {
+        if(face[i]->HasVertex(n)) return;
+    }
+    neighbor.Remove(n);
 }

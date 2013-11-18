@@ -1,14 +1,11 @@
 #include "vertex.h"
 #include "triangle.h"
 #include "vector.h"
-#include "list.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
-
-List<Vertex *> vertices;
-List<Triangle *> triangles;
+#include <stdlib.h>   
 
 unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)
 {

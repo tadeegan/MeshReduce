@@ -1,9 +1,5 @@
 #include "progmesh.h"
 
-extern List<Vertex *> vertices;
-extern List<Triangle *> triangles;
-
-
 float ComputeEdgeCollapseCost(Vertex *u,Vertex *v) {
 
     int i;

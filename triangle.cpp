@@ -1,6 +1,5 @@
 #include "triangle.h"
-
-extern List<Triangle *> triangles;
+#include "vertex.h"
 
 Triangle::Triangle(Vertex *v0,Vertex *v1,Vertex *v2){
     assert(v0!=v1 && v1!=v2 && v2!=v0);

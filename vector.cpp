@@ -1,11 +1,6 @@
-
-#include <stdio.h>
-#include <math.h>
-#include <assert.h>
-
 #include "vector.h"
 
-float  sqr(float a) {return a*a;}
+float sqr(float a) {return a*a;}
 
 // vector (floating point) implementation
 

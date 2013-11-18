@@ -1,0 +1,289 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Add	src/list.h	/^void List<Type>::Add(Type t){$/;"	f	class:List
+AddFaces	progmesh.cpp	/^void AddFaces(List<tridata> &tri){$/;"	f
+AddFaces	src/progmesh.cpp	/^void AddFaces(List<tridata> &tri){$/;"	f
+AddUnique	src/list.h	/^void List<Type>::AddUnique(Type t){$/;"	f	class:List
+AddVertex	progmesh.cpp	/^void AddVertex(List<Vector> &vert){$/;"	f
+AddVertex	src/progmesh.cpp	/^void AddVertex(List<Vector> &vert){$/;"	f
+AnimateParameters	src/bunnygut.cpp	/^void AnimateParameters() {$/;"	f
+CXX_OPTS	Makefile	/^CXX_OPTS =-c -g -O0  $(WARNINGS)$/;"	m
+CalcFPSDeltaT	src/winmain.cpp	/^void CalcFPSDeltaT(){$/;"	f
+Collapse	progmesh.cpp	/^void Collapse(Vertex *u,Vertex *v){$/;"	f
+Collapse	src/progmesh.cpp	/^void Collapse(Vertex *u,Vertex *v){$/;"	f
+ComputeAllEdgeCollapseCosts	progmesh.cpp	/^void ComputeAllEdgeCollapseCosts() {$/;"	f
+ComputeAllEdgeCollapseCosts	src/progmesh.cpp	/^void ComputeAllEdgeCollapseCosts() {$/;"	f
+ComputeEdgeCollapseCost	progmesh.cpp	/^float ComputeEdgeCollapseCost(Vertex *u,Vertex *v) {$/;"	f
+ComputeEdgeCollapseCost	src/progmesh.cpp	/^float ComputeEdgeCollapseCost(Vertex *u,Vertex *v) {$/;"	f
+ComputeEdgeCostAtVertex	progmesh.cpp	/^void ComputeEdgeCostAtVertex(Vertex *v) {$/;"	f
+ComputeEdgeCostAtVertex	src/progmesh.cpp	/^void ComputeEdgeCostAtVertex(Vertex *v) {$/;"	f
+ComputeMouseVector	src/winmain.cpp	/^void ComputeMouseVector(){$/;"	f
+ComputeNormal	src/progmesh.cpp	/^void Triangle::ComputeNormal(){$/;"	f	class:Triangle
+ComputeNormal	triangle.cpp	/^void Triangle::ComputeNormal(){$/;"	f	class:Triangle
+Contains	src/list.h	/^int List<Type>::Contains(Type t){$/;"	f	class:List
+CreateOpenGLWindow	src/winmain.cpp	/^HWND CreateOpenGLWindow(char* title)$/;"	f
+DelIndex	src/list.h	/^void List<Type>::DelIndex(int i){$/;"	f	class:List
+DeltaT	src/winmain.cpp	/^float   DeltaT = 0.1f;$/;"	v
+Display	src/winmain.cpp	/^void Display(){$/;"	f
+DrawModelTriangles	src/bunnygut.cpp	/^void DrawModelTriangles() {$/;"	f
+EXEC	Makefile	/^EXEC =testing$/;"	m
+FONT_H	src/font.h	2;"	d
+FPS	src/winmain.cpp	/^float   FPS;$/;"	v
+Face	Face.h	/^class Face{$/;"	c
+GENERIC_LIST_H	src/list.h	7;"	d
+GENERIC_VECTOR_H	src/vector.h	8;"	d
+GENERIC_VECTOR_H	vector.h	8;"	d
+GetRabbitData	src/bunnygut.cpp	/^void GetRabbitData(){$/;"	f
+HasVertex	src/progmesh.cpp	/^int Triangle::HasVertex(Vertex *v) {$/;"	f	class:Triangle
+HasVertex	triangle.cpp	/^int Triangle::HasVertex(Vertex *v) {$/;"	f	class:Triangle
+Height	src/winmain.cpp	/^int 	Height = 512;$/;"	v
+InitModel	src/bunnygut.cpp	/^void InitModel() {$/;"	f
+List	src/list.h	/^List<Type>::List(int s){$/;"	f	class:List
+List	src/list.h	/^template <class Type> class List {$/;"	c
+MakeRasterFont	src/font.cpp	/^static void MakeRasterFont(void){$/;"	f	file:
+Map	src/bunnygut.cpp	/^int Map(int a,int mx) {$/;"	f
+MinimumCostEdge	progmesh.cpp	/^Vertex *MinimumCostEdge(){$/;"	f
+MinimumCostEdge	src/progmesh.cpp	/^Vertex *MinimumCostEdge(){$/;"	f
+MouseState	src/winmain.cpp	/^int     MouseState=0;     \/\/ true iff left button down$/;"	v
+MouseVector	src/winmain.cpp	/^Vector  MouseVector;      \/\/ 3D direction mouse points$/;"	v
+MouseX	src/winmain.cpp	/^int     MouseX = 0;$/;"	v
+MouseY	src/winmain.cpp	/^int     MouseY = 0;$/;"	v
+OBJS	Makefile	/^OBJS =run.o vector.o vertex.o triangle.o list.o progmesh.o$/;"	m
+OldMouseVector	src/winmain.cpp	/^Vector  OldMouseVector;$/;"	v
+PROGRESSIVE_MESH_H	progmesh.h	19;"	d
+PROGRESSIVE_MESH_H	src/progmesh.h	19;"	d
+Pack	src/list.h	/^void List<Type>::Pack(){$/;"	f	class:List
+PermuteVertices	src/bunnygut.cpp	/^void PermuteVertices(List<int> &permutation) {$/;"	f
+Post	src/font.cpp	/^void PostedString::Post() {$/;"	f	class:PostedString
+PostString	src/font.cpp	/^void PostString(char *_s,int _x,int _y,float _life){$/;"	f
+PostedString	src/font.cpp	/^PostedString::PostedString(char *_s,int _x,int _y,float _life) {$/;"	f	class:PostedString
+PostedString	src/font.cpp	/^class PostedString {$/;"	c	file:
+PrintStats	src/winmain.cpp	/^void PrintStats(){$/;"	f
+PrintString	src/font.cpp	/^void PrintString(char *s,float x,float y) {$/;"	f
+PrintString	src/font.cpp	/^void PrintString(char *s,int x,int y){$/;"	f
+ProgressiveMesh	progmesh.cpp	/^void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, $/;"	f
+ProgressiveMesh	src/progmesh.cpp	/^void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, $/;"	f
+Quaternion	src/vector.h	/^	 Quaternion(){x=y=z=0.0f;r=1.0f;};$/;"	f	class:Quaternion
+Quaternion	src/vector.h	/^	 Quaternion(Vector v,float t){v=normalize(v);r=(float)cos(t\/2.0);v=v*(float)sin(t\/2.0);x=v.x;y=v.y;z=v.z;};$/;"	f	class:Quaternion
+Quaternion	src/vector.h	/^	 Quaternion(float _r,float _x,float _y,float _z){r=_r;x=_x;y=_y;z=_z;};$/;"	f	class:Quaternion
+Quaternion	src/vector.h	/^class Quaternion{$/;"	c
+Quaternion	vector.h	/^	 Quaternion(){x=y=z=0.0f;r=1.0f;};$/;"	f	class:Quaternion
+Quaternion	vector.h	/^	 Quaternion(Vector v,float t){v=normalize(v);r=(float)cos(t\/2.0);v=v*(float)sin(t\/2.0);x=v.x;y=v.y;z=v.z;};$/;"	f	class:Quaternion
+Quaternion	vector.h	/^	 Quaternion(float _r,float _x,float _y,float _z){r=_r;x=_x;y=_y;z=_z;};$/;"	f	class:Quaternion
+Quaternion	vector.h	/^class Quaternion{$/;"	c
+RABBIT_DATA_H	src/rabdata.h	21;"	d
+RABBIT_TRIANGLE_NUM	src/rabdata.h	24;"	d
+RABBIT_VERTEX_NUM	src/rabdata.h	23;"	d
+Remove	src/list.h	/^void List<Type>::Remove(Type t){$/;"	f	class:List
+RemoveIfNonNeighbor	src/progmesh.cpp	/^void Vertex::RemoveIfNonNeighbor(Vertex *n) {$/;"	f	class:Vertex
+RemoveIfNonNeighbor	vertex.cpp	/^void Vertex::RemoveIfNonNeighbor(Vertex *n) {$/;"	f	class:Vertex
+RenderModel	src/bunnygut.cpp	/^void RenderModel() {$/;"	f
+RenderStrings	src/font.cpp	/^void RenderStrings() {$/;"	f
+ReplaceVertex	src/progmesh.cpp	/^void Triangle::ReplaceVertex(Vertex *vold,Vertex *vnew) {$/;"	f	class:Triangle
+ReplaceVertex	triangle.cpp	/^void Triangle::ReplaceVertex(Vertex *vold,Vertex *vnew) {$/;"	f	class:Triangle
+Reshape	src/winmain.cpp	/^void Reshape(int width, int height){$/;"	f
+SetSize	src/list.h	/^void List<Type>::SetSize(int s){$/;"	f	class:List
+SpinIt	src/winmain.cpp	/^void SpinIt(){$/;"	f
+SpitLetters	src/font.cpp	/^void SpitLetters(char *s) {$/;"	f
+StatusDraw	src/bunnygut.cpp	/^void StatusDraw() {$/;"	f
+TRIANGLE_H	Triangle.h	2;"	d
+TRIANGLE_H	triangle.h	2;"	d
+Triangle	Triangle.h	/^class Triangle {$/;"	c
+Triangle	src/progmesh.cpp	/^Triangle::Triangle(Vertex *v0,Vertex *v1,Vertex *v2){$/;"	f	class:Triangle
+Triangle	src/progmesh.cpp	/^class Triangle {$/;"	c	file:
+Triangle	triangle.cpp	/^Triangle::Triangle(Vertex *v0,Vertex *v1,Vertex *v2){$/;"	f	class:Triangle
+Triangle	triangle.h	/^class Triangle {$/;"	c
+VEC3_H	Vec3.h	2;"	d
+VERTEX_H	Vertex.h	2;"	d
+VERTEX_H	vertex.h	2;"	d
+Vec3	Vec3.h	/^class Vec3{$/;"	c
+Vec3	vec3.cpp	/^Vec3::Vec3(){$/;"	f	class:Vec3
+Vec3	vec3.cpp	/^Vec3::Vec3(float _x, float _y, float _z){$/;"	f	class:Vec3
+Vector	src/vector.h	/^	Vector(float _x=0.0,float _y=0.0,float _z=0.0){x=_x;y=_y;z=_z;};$/;"	f	class:Vector
+Vector	src/vector.h	/^class Vector {$/;"	c
+Vector	vector.h	/^	Vector(float _x=0.0,float _y=0.0,float _z=0.0){x=_x;y=_y;z=_z;};$/;"	f	class:Vector
+Vector	vector.h	/^class Vector {$/;"	c
+Vertex	Vertex.h	/^class Vertex {$/;"	c
+Vertex	src/progmesh.cpp	/^Vertex::Vertex(Vector v,int _id) {$/;"	f	class:Vertex
+Vertex	src/progmesh.cpp	/^class Vertex {$/;"	c	file:
+Vertex	vertex.cpp	/^Vertex::Vertex(Vector v,int _id) {$/;"	f	class:Vertex
+Vertex	vertex.h	/^class Vertex {$/;"	c
+ViewAngle	src/winmain.cpp	/^float 	ViewAngle=45.0f;$/;"	v
+VirtualTrackBall	src/winmain.cpp	/^Quaternion VirtualTrackBall(Vector cop,Vector cor,Vector dir1,Vector dir2) {$/;"	f
+WARNINGS	Makefile	/^WARNINGS =-Wfatal-errors -Werror -Wchar-subscripts -Wparentheses -Wreturn-type -Wmissing-braces -Wundef -Wshadow$/;"	m
+Width	src/winmain.cpp	/^int 	Width  = 512;$/;"	v
+WinMain	src/winmain.cpp	/^int APIENTRY WinMain(HINSTANCE hCurrentInst, HINSTANCE hPreviousInst,$/;"	f
+WindowProc	src/winmain.cpp	/^LONG WINAPI WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)$/;"	f
+allocate	src/list.h	/^void List<Type>::allocate(int s){$/;"	f	class:List
+angle	src/vector.h	/^	 float angle(){return (float)(acos(r)*2.0);}$/;"	f	class:Quaternion
+angle	vector.h	/^	 float angle(){return (float)(acos(r)*2.0);}$/;"	f	class:Quaternion
+array_size	src/list.h	/^		int		array_size;$/;"	m	class:List
+axis	src/vector.h	/^	 Vector axis(){Vector a(x,y,z); return a*(float)(1\/sin(angle()\/2.0));}$/;"	f	class:Quaternion
+axis	vector.h	/^	 Vector axis(){Vector a(x,y,z); return a*(float)(1\/sin(angle()\/2.0));}$/;"	f	class:Quaternion
+collapse	Vertex.h	/^        Vertex * collapse; \/\/ candidate vertex for collapse$/;"	m	class:Vertex
+collapse	src/progmesh.cpp	/^	Vertex *         collapse; \/\/ candidate vertex for collapse$/;"	m	class:Vertex	file:
+collapse	vertex.h	/^    Vertex *         collapse; \/\/ candidate vertex for collapse$/;"	m	class:Vertex
+collapse_map	src/bunnygut.cpp	/^List<int> collapse_map;  \/\/ to which neighbor each vertex collapses$/;"	v
+comp	Makefile	/^comp =clang++$/;"	m
+concurrent	src/vector.cpp	/^int concurrent(Vector a,Vector b) {$/;"	f
+concurrent	vector.cpp	/^int concurrent(Vector a,Vector b) {$/;"	f
+cost	Vertex.h	/^        float cost; \/\/ cached cost of collapsing edge$/;"	m	class:Vertex
+dm	src/bunnygut.cpp	/^	float dm;  \/\/ rate of change in "m"$/;"	m	struct:keyframethings	file:
+dn	src/bunnygut.cpp	/^	float dn;  \/\/ rate of change in "n"$/;"	m	struct:keyframethings	file:
+element	src/list.h	/^		Type *	element;$/;"	m	class:List
+face	Vertex.h	/^        list<Triangle *> face; \/\/ adjacent triangles$/;"	m	class:Vertex
+face	src/progmesh.cpp	/^	List<Triangle *> face;     \/\/ adjacent triangles$/;"	m	class:Vertex	file:
+face	vertex.h	/^    List<Triangle *> face;     \/\/ adjacent triangles$/;"	m	class:Vertex
+fontOffset	src/font.cpp	/^static GLuint fontOffset;$/;"	v	file:
+getmatrix	src/vector.h	/^	 matrix  getmatrix(){return matrix(xdir(),ydir(),zdir());}$/;"	f	class:Quaternion
+getmatrix	vector.h	/^	 matrix  getmatrix(){return matrix(xdir(),ydir(),zdir());}$/;"	f	class:Quaternion
+hDC	src/winmain.cpp	/^HDC hDC;                \/* device context *\/$/;"	v
+hPalette	src/winmain.cpp	/^HPALETTE hPalette = 0;  \/* custom palette (if needed) *\/$/;"	v
+id	Vertex.h	/^        int id; \/\/ place of vertex in original list$/;"	m	class:Vertex
+id	src/progmesh.cpp	/^	int              id;       \/\/ place of vertex in original list$/;"	m	class:Vertex	file:
+id	vertex.h	/^    int              id;       \/\/ place of vertex in original list$/;"	m	class:Vertex
+initialized	src/font.cpp	/^static int initialized=0;$/;"	v	file:
+keyframethings	src/bunnygut.cpp	/^struct keyframethings {$/;"	s	file:
+keys	src/bunnygut.cpp	/^} keys[]={$/;"	v	typeref:struct:keyframethings
+life	src/font.cpp	/^	float life;$/;"	m	class:PostedString	file:
+lifestart	src/font.cpp	/^	float lifestart;$/;"	m	class:PostedString	file:
+lodbase	src/bunnygut.cpp	/^float lodbase=0.5f; \/\/ the fraction of vertices used to morph toward$/;"	v
+m	src/bunnygut.cpp	/^	float m;   \/\/ morph value$/;"	m	struct:keyframethings	file:
+magnitude	src/vector.cpp	/^float magnitude(Vector v) {$/;"	f
+magnitude	vector.cpp	/^float magnitude(Vector v) {$/;"	f
+main	main.cpp	/^int main() {$/;"	f
+main	run.cpp	/^int main () {$/;"	f
+matrix	src/vector.h	/^	matrix(){x=Vector(1.0f,0.0f,0.0f);$/;"	f	class:matrix
+matrix	src/vector.h	/^	matrix(Vector _x,Vector _y,Vector _z){x=_x;y=_y;z=_z;};$/;"	f	class:matrix
+matrix	src/vector.h	/^class matrix{$/;"	c
+matrix	vector.h	/^	matrix(){x=Vector(1.0f,0.0f,0.0f);$/;"	f	class:matrix
+matrix	vector.h	/^	matrix(Vector _x,Vector _y,Vector _z){x=_x;y=_y;z=_z;};$/;"	f	class:matrix
+matrix	vector.h	/^class matrix{$/;"	c
+model_orientation	src/bunnygut.cpp	/^Quaternion model_orientation;  \/\/ orientation of bunny$/;"	v
+model_position	src/bunnygut.cpp	/^Vector model_position;         \/\/ position of bunny$/;"	v
+morph	src/bunnygut.cpp	/^float morph=1.0f;   \/\/ where to render between 2 levels of detail$/;"	v
+n	src/bunnygut.cpp	/^	float n;   \/\/ portion of vertices used to start$/;"	m	struct:keyframethings	file:
+neighbor	Vertex.h	/^        list<Vertex *> neighbor; \/\/ adjacent vertices$/;"	m	class:Vertex
+neighbor	src/progmesh.cpp	/^	List<Vertex *>   neighbor; \/\/ adjacent vertices$/;"	m	class:Vertex	file:
+neighbor	vertex.h	/^    List<Vertex *>   neighbor; \/\/ adjacent vertices$/;"	m	class:Vertex
+normal	Triangle.h	/^        Vec3 normal; \/\/ orthogonal unit vector$/;"	m	class:Triangle
+normal	src/progmesh.cpp	/^	Vector           normal;    \/\/ unit vector othogonal to this face$/;"	m	class:Triangle	file:
+normal	triangle.h	/^    Vector           normal;    \/\/ unit vector othogonal to this face$/;"	m	class:Triangle
+normalize	src/vector.cpp	/^Vector normalize(Vector v) {$/;"	f
+normalize	vector.cpp	/^Vector normalize(Vector v) {$/;"	f
+num	src/list.h	/^		int		num;$/;"	m	class:List
+objdist	src/progmesh.cpp	/^	float            objdist;  \/\/ cached cost of collapsing edge$/;"	m	class:Vertex	file:
+objdist	vertex.h	/^    float            objdist;  \/\/ cached cost of collapsing edge$/;"	m	class:Vertex
+operator *	src/vector.cpp	/^Quaternion operator*(Quaternion a,Quaternion b) {$/;"	f
+operator *	src/vector.cpp	/^Quaternion operator*(Quaternion a,float b) {$/;"	f
+operator *	src/vector.cpp	/^Vector operator*(Quaternion q,Vector v) {$/;"	f
+operator *	src/vector.cpp	/^Vector operator*(Vector v,Quaternion q){$/;"	f
+operator *	src/vector.cpp	/^Vector operator*(Vector v1,Vector v2) {$/;"	f
+operator *	src/vector.cpp	/^Vector operator*(Vector v1,float s)   {return Vector(v1.x*s,v1.y*s,v1.z*s);}$/;"	f
+operator *	src/vector.cpp	/^Vector operator*(float s, Vector v1)  {return Vector(v1.x*s,v1.y*s,v1.z*s);}$/;"	f
+operator *	src/vector.cpp	/^Vector operator*(matrix m,Vector v){$/;"	f
+operator *	src/vector.cpp	/^matrix operator*(matrix m1,matrix m2){$/;"	f
+operator *	vector.cpp	/^Quaternion operator*(Quaternion a,Quaternion b) {$/;"	f
+operator *	vector.cpp	/^Quaternion operator*(Quaternion a,float b) {$/;"	f
+operator *	vector.cpp	/^Vector operator*(Quaternion q,Vector v) {$/;"	f
+operator *	vector.cpp	/^Vector operator*(Vector v,Quaternion q){$/;"	f
+operator *	vector.cpp	/^Vector operator*(Vector v1,Vector v2) {$/;"	f
+operator *	vector.cpp	/^Vector operator*(Vector v1,float s)   {return Vector(v1.x*s,v1.y*s,v1.z*s);}$/;"	f
+operator *	vector.cpp	/^Vector operator*(float s, Vector v1)  {return Vector(v1.x*s,v1.y*s,v1.z*s);}$/;"	f
+operator *	vector.cpp	/^Vector operator*(matrix m,Vector v){$/;"	f
+operator *	vector.cpp	/^matrix operator*(matrix m1,matrix m2){$/;"	f
+operator +	src/vector.cpp	/^Quaternion operator+(Quaternion a,Quaternion b) {$/;"	f
+operator +	src/vector.cpp	/^Vector operator+(Vector v1,Vector v2) {return Vector(v1.x+v2.x,v1.y+v2.y,v1.z+v2.z);}$/;"	f
+operator +	vec3.cpp	/^Vec3 Vec3::operator+(Vec3 const & other){$/;"	f	class:Vec3
+operator +	vector.cpp	/^Quaternion operator+(Quaternion a,Quaternion b) {$/;"	f
+operator +	vector.cpp	/^Vector operator+(Vector v1,Vector v2) {return Vector(v1.x+v2.x,v1.y+v2.y,v1.z+v2.z);}$/;"	f
+operator -	src/vector.cpp	/^Quaternion operator-(Quaternion q) {$/;"	f
+operator -	src/vector.cpp	/^Vector operator-(Vector v)            {return Vector(-v.x,-v.y,-v.z);}$/;"	f
+operator -	src/vector.cpp	/^Vector operator-(Vector v1,Vector v2) {return Vector(v1.x-v2.x,v1.y-v2.y,v1.z-v2.z);}$/;"	f
+operator -	vector.cpp	/^Quaternion operator-(Quaternion q) {$/;"	f
+operator -	vector.cpp	/^Vector operator-(Vector v)            {return Vector(-v.x,-v.y,-v.z);}$/;"	f
+operator -	vector.cpp	/^Vector operator-(Vector v1,Vector v2) {return Vector(v1.x-v2.x,v1.y-v2.y,v1.z-v2.z);}$/;"	f
+operator /	src/vector.cpp	/^Vector operator\/(Vector v1,float s)   {return v1*(1.0f\/s);}$/;"	f
+operator /	vector.cpp	/^Vector operator\/(Vector v1,float s)   {return v1*(1.0f\/s);}$/;"	f
+operator []	src/list.h	/^		Type	&operator[](int i){assert(i>=0 && i<num); return element[i];}$/;"	f	class:List
+operator ^	src/vector.cpp	/^float  operator^(Vector v1,Vector v2) {return v1.x*v2.x + v1.y*v2.y + v1.z*v2.z;}$/;"	f
+operator ^	src/vector.cpp	/^float operator^(Quaternion a,Quaternion b) {$/;"	f
+operator ^	vector.cpp	/^float  operator^(Vector v1,Vector v2) {return v1.x*v2.x + v1.y*v2.y + v1.z*v2.z;}$/;"	f
+operator ^	vector.cpp	/^float operator^(Quaternion a,Quaternion b) {$/;"	f
+operator float *	src/vector.h	/^	operator float *() { return &x;};$/;"	f	class:Vector
+operator float *	vector.h	/^	operator float *() { return &x;};$/;"	f	class:Vector
+parsePolyLine	run.cpp	/^void parsePolyLine(std::string line){$/;"	f
+planelineintersection	src/vector.cpp	/^Vector planelineintersection(Vector n,float d,Vector p1,Vector p2){$/;"	f
+planelineintersection	vector.cpp	/^Vector planelineintersection(Vector n,float d,Vector p1,Vector p2){$/;"	f
+position	Vertex.h	/^        Vec3 position; \/\/ location of this point$/;"	m	class:Vertex
+position	src/progmesh.cpp	/^	Vector           position; \/\/ location of point in euclidean space$/;"	m	class:Vertex	file:
+position	vertex.h	/^    Vector           position; \/\/ location of point in euclidean space$/;"	m	class:Vertex
+posts	src/font.cpp	/^List<PostedString *> posts;$/;"	v
+r	src/vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+r	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+rabbit_triangles	src/rabdata.cpp	/^int rabbit_triangles[RABBIT_TRIANGLE_NUM][3]={$/;"	v
+rabbit_vertices	src/rabdata.cpp	/^float rabbit_vertices[RABBIT_VERTEX_NUM][3]={$/;"	v
+rasters	src/font.cpp	/^GLubyte rasters[][13] = {$/;"	v
+render_num	src/bunnygut.cpp	/^int   render_num;   \/\/ number of vertices to draw with$/;"	v
+renderpolycount	src/bunnygut.cpp	/^int renderpolycount=0;   \/\/ polygons rendered in the current frame$/;"	v
+s	src/font.cpp	/^	char s[1024];$/;"	m	class:PostedString	file:
+slerp	src/vector.cpp	/^Quaternion slerp(Quaternion a,Quaternion b,float interp){$/;"	f
+slerp	vector.cpp	/^Quaternion slerp(Quaternion a,Quaternion b,float interp){$/;"	f
+splitString	run.cpp	/^unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)$/;"	f
+sqr	src/vector.cpp	/^float  sqr(float a) {return a*a;}$/;"	f
+sqr	vector.cpp	/^float sqr(float a) {return a*a;}$/;"	f
+t	src/bunnygut.cpp	/^	float t;   \/\/ timestamp$/;"	m	struct:keyframethings	file:
+transpose	src/vector.cpp	/^matrix transpose(matrix m) {$/;"	f
+transpose	vector.cpp	/^matrix transpose(matrix m) {$/;"	f
+tri	src/bunnygut.cpp	/^List<tridata> tri;       \/\/ global list of triangles$/;"	v
+triangles	src/progmesh.cpp	/^List<Triangle *> triangles;$/;"	v
+tridata	progmesh.h	/^class tridata {$/;"	c
+tridata	src/progmesh.h	/^class tridata {$/;"	c
+v	progmesh.h	/^	int	v[3];  \/\/ indices to vertex list$/;"	m	class:tridata
+v	src/progmesh.h	/^	int	v[3];  \/\/ indices to vertex list$/;"	m	class:tridata
+validateAndCreateVertex	run.cpp	/^Vertex * validateAndCreateVertex(std::vector<std::string> strings, int id){$/;"	f
+vert	src/bunnygut.cpp	/^List<Vector> vert;       \/\/ global list of vertices$/;"	v
+vertex	src/progmesh.cpp	/^	Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle	file:
+vertex	triangle.h	/^    Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle
+vertices	src/progmesh.cpp	/^List<Vertex *>   vertices;$/;"	v
+verts	Face.h	/^        vector<Vec3 *> verts;$/;"	m	class:Face
+verts	Triangle.h	/^        Vertex * verts[3];\/\/ the 3 points that make this tri$/;"	m	class:Triangle
+x	Vec3.h	/^        float x;$/;"	m	class:Vec3
+x	src/font.cpp	/^	int x,y;$/;"	m	class:PostedString	file:
+x	src/vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+x	src/vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+x	src/vector.h	/^	float x,y,z;$/;"	m	class:Vector
+x	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+x	vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+x	vector.h	/^	float x,y,z;$/;"	m	class:Vector
+xdir	src/vector.h	/^	 Vector xdir(){return Vector(1-2*(y*y+z*z),  2*(x*y+r*z),  2*(x*z-r*y));}$/;"	f	class:Quaternion
+xdir	vector.h	/^	 Vector xdir(){return Vector(1-2*(y*y+z*z),  2*(x*y+r*z),  2*(x*z-r*y));}$/;"	f	class:Quaternion
+y	Vec3.h	/^        float y;$/;"	m	class:Vec3
+y	src/font.cpp	/^	int x,y;$/;"	m	class:PostedString	file:
+y	src/vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+y	src/vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+y	src/vector.h	/^	float x,y,z;$/;"	m	class:Vector
+y	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+y	vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+y	vector.h	/^	float x,y,z;$/;"	m	class:Vector
+ydir	src/vector.h	/^	 Vector ydir(){return Vector(  2*(x*y-r*z),1-2*(x*x+z*z),  2*(y*z+r*x));}$/;"	f	class:Quaternion
+ydir	vector.h	/^	 Vector ydir(){return Vector(  2*(x*y-r*z),1-2*(x*x+z*z),  2*(y*z+r*x));}$/;"	f	class:Quaternion
+z	Vec3.h	/^        float z;$/;"	m	class:Vec3
+z	src/vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+z	src/vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+z	src/vector.h	/^	float x,y,z;$/;"	m	class:Vector
+z	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+z	vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+z	vector.h	/^	float x,y,z;$/;"	m	class:Vector
+zdir	src/vector.h	/^	 Vector zdir(){return Vector(  2*(x*z+r*y),  2*(y*z-r*x),1-2*(x*x+y*y));}$/;"	f	class:Quaternion
+zdir	vector.h	/^	 Vector zdir(){return Vector(  2*(x*z+r*y),  2*(y*z-r*x),1-2*(x*x+y*y));}$/;"	f	class:Quaternion
+~List	src/list.h	/^List<Type>::~List<Type>(){$/;"	f	class:List
+~PostedString	src/font.cpp	/^PostedString::~PostedString() {$/;"	f	class:PostedString
+~Triangle	src/progmesh.cpp	/^Triangle::~Triangle(){$/;"	f	class:Triangle
+~Triangle	triangle.cpp	/^Triangle::~Triangle(){$/;"	f	class:Triangle
+~Vertex	src/progmesh.cpp	/^Vertex::~Vertex(){$/;"	f	class:Vertex
+~Vertex	vertex.cpp	/^Vertex::~Vertex(){$/;"	f	class:Vertex

@@ -24,6 +24,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <algorithm>
+#include "triangle.h"
 
 class tridata {
   public:

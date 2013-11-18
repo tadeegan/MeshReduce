@@ -1,8 +1,5 @@
 #include "vertex.h"
-#include "list.h"
-#include <iostream>
-
-extern List<Vertex *> vertices;
+#include "triangle.h"
 
 Vertex::Vertex(Vector v,int _id) {
     position =v;

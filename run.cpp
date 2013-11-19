@@ -11,6 +11,7 @@
 List<Vertex *> vertices(0);
 List<Triangle *> triangles(0);
 List<Vector> vert;
+List<tridata> tri;
 
 unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)
 {
@@ -44,7 +45,7 @@ Vertex * validateAndCreateVertex(std::vector<std::string> strings, int id){
     return v;
 }
 
-void parsePolyLine(std::string line, List<tridata> & triList){
+void parsePolyLine(std::string line){
     std::vector<std::string> stringSplits;
     splitString(line, stringSplits, ' ');
     int num_verts = stringSplits.size() - 1;
@@ -60,7 +61,7 @@ void parsePolyLine(std::string line, List<tridata> & triList){
 	td.v[0]=indicies[0];
 	td.v[1]=indicies[1+i];
 	td.v[2]=indicies[2+i];
-	triList.Add(td);
+	tri.Add(td);
     }
 }
 
@@ -98,15 +99,13 @@ int main () {
 
     std::string line;
     std::ifstream myfile ("bunny.obj");
-    List<Vector> vert;       // global list of vertices
-    List<tridata> tri;
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )
         {
             //std::std::cout << line << std::std::endl;
             if(line[0] == 'f'){
-                //parsePolyLine(line);
+                parsePolyLine(line);
             }
             else if(line[0] == 'v'){
                 parseVertice(line);
@@ -126,8 +125,8 @@ int main () {
     else{
         std::cout << "Unable to open file"; 
     }
-    List<int> permutation;
-    List<int> mm;
+    List<int> permutation(0);
+    List<int> mm(0);
     //ProgressiveMesh(vert, tri, mm, permutation); 
     //reduce
 

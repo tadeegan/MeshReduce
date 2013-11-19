@@ -1,6 +1,7 @@
 #include "vertex.h"
 #include "triangle.h"
 #include "vector.h"
+#include "progmesh.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -42,7 +43,7 @@ Vertex * validateAndCreateVertex(std::vector<std::string> strings, int id){
     return v;
 }
 
-void parsePolyLine(std::string line){
+void parsePolyLine(std::string line, List<tridata> & triList){
     std::vector<std::string> stringSplits;
     splitString(line, stringSplits, ' ');
     int num_verts = stringSplits.size() - 1;
@@ -54,9 +55,11 @@ void parsePolyLine(std::string line){
     int num_triangles = num_verts - 2;
     for(int i = 0; i < num_triangles; i++){
         std::cout << line << std::endl;
-        std::cout << "making triangle: " << indicies[0] << " " << indicies[1+i] << " " << indicies[2+i] << std::endl;
-        Triangle * temp = new Triangle(vertices[indicies[0]], vertices[indicies[1+i]], vertices[indicies[2+i]]);
-        triangles.Add(temp);
+        tridata td;
+	td.v[0]=indicies[0];
+	td.v[1]=indicies[1+i];
+	td.v[2]=indicies[2+i];
+	triList.Add(td);
     }
 }
 
@@ -67,20 +70,18 @@ int main () {
  
     std::string line;
     std::ifstream myfile ("bunny.obj");
+    List<Vector> vert;       // global list of vertices
+    List<tridata> tri;
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )
         {
             //std::std::cout << line << std::std::endl;
             if(line[0] == 'f'){
-                parsePolyLine(line);
+                parsePolyLine(line, tri);
             }
             else if(line[0] == 'v'){
-                std::vector<std::string> stringSplits;
-                splitString(line, stringSplits, ' ');
-                Vertex * temp = validateAndCreateVertex(stringSplits, numVerts);
-                numVerts++;
-                vertices.Add(temp);
+
             }
         }
         myfile.close();
@@ -88,6 +89,9 @@ int main () {
     else{
         std::cout << "Unable to open file"; 
     }
+    List<int> permutation;
+    List<int> mm;
+    //ProgressiveMesh(vert, tri, mm, permutation); 
     //reduce
 
     return 0;

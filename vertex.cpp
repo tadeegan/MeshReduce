@@ -1,5 +1,6 @@
 #include "vertex.h"
 #include "triangle.h"
+#include <iostream>
 
 Vertex::Vertex(Vector v,int _id) {
     position =v;

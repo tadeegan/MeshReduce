@@ -4,10 +4,115 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Add	list.h	/^        void Add(Type t){$/;"	f
+Add	list.h	/^        void Add(Type t){$/;"	f	class:List
+AddFaces	progmesh.cpp	/^void AddFaces(List<tridata> &tri){$/;"	f
+AddUnique	list.h	/^            void AddUnique(Type t){$/;"	f	class:List
+AddVertex	progmesh.cpp	/^void AddVertex(List<Vector> &vert){$/;"	f
+CXX_OPTS	Makefile	/^CXX_OPTS =-c -g $(WARNINGS)$/;"	m
+Collapse	progmesh.cpp	/^void Collapse(Vertex *u,Vertex *v){$/;"	f
+ComputeAllEdgeCollapseCosts	progmesh.cpp	/^void ComputeAllEdgeCollapseCosts() {$/;"	f
+ComputeEdgeCollapseCost	progmesh.cpp	/^float ComputeEdgeCollapseCost(Vertex *u,Vertex *v) {$/;"	f
+ComputeEdgeCostAtVertex	progmesh.cpp	/^void ComputeEdgeCostAtVertex(Vertex *v) {$/;"	f
+ComputeNormal	triangle.cpp	/^void Triangle::ComputeNormal(){$/;"	f	class:Triangle
+Contains	list.h	/^        int Contains(Type t){$/;"	f	class:List
+DelIndex	list.h	/^        void DelIndex(int i){$/;"	f	class:List
+EXEC	Makefile	/^EXEC =testing$/;"	m
+Face	Face.h	/^class Face{$/;"	c
+GENERIC_LIST_H	list.h	6;"	d
+GENERIC_VECTOR_H	vector.h	8;"	d
+HasVertex	triangle.cpp	/^int Triangle::HasVertex(Vertex *v) {$/;"	f	class:Triangle
+List	list.h	/^        List(){$/;"	f	class:List
+List	list.h	/^        List(int s){$/;"	f	class:List
+List	list.h	/^class List {$/;"	c
+MinimumCostEdge	progmesh.cpp	/^Vertex *MinimumCostEdge(){$/;"	f
+OBJS	Makefile	/^OBJS =run.o vector.o vertex.o triangle.o list.o progmesh.o$/;"	m
+PROGRESSIVE_MESH_H	progmesh.h	19;"	d
+Pack	list.h	/^        void Pack(){$/;"	f	class:List
+ProgressiveMesh	progmesh.cpp	/^void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, $/;"	f
+Quaternion	vector.h	/^	 Quaternion(){x=y=z=0.0f;r=1.0f;};$/;"	f	class:Quaternion
+Quaternion	vector.h	/^	 Quaternion(Vector v,float t){v=normalize(v);r=(float)cos(t\/2.0);v=v*(float)sin(t\/2.0);x=v.x;y=v.y;z=v.z;};$/;"	f	class:Quaternion
+Quaternion	vector.h	/^	 Quaternion(float _r,float _x,float _y,float _z){r=_r;x=_x;y=_y;z=_z;};$/;"	f	class:Quaternion
+Quaternion	vector.h	/^class Quaternion{$/;"	c
+Remove	list.h	/^        void Remove(Type t){$/;"	f	class:List
+RemoveIfNonNeighbor	vertex.cpp	/^void Vertex::RemoveIfNonNeighbor(Vertex *n) {$/;"	f	class:Vertex
+ReplaceVertex	triangle.cpp	/^void Triangle::ReplaceVertex(Vertex *vold,Vertex *vnew) {$/;"	f	class:Triangle
+SetSize	list.h	/^        void SetSize(int s){$/;"	f	class:List
+TRIANGLE_H	triangle.h	2;"	d
+Triangle	triangle.cpp	/^Triangle::Triangle(Vertex *v0,Vertex *v1,Vertex *v2){$/;"	f	class:Triangle
+Triangle	triangle.h	/^class Triangle {$/;"	c
+VERTEX_H	vertex.h	2;"	d
+Vector	vector.h	/^	Vector(float _x=0.0,float _y=0.0,float _z=0.0){x=_x;y=_y;z=_z;};$/;"	f	class:Vector
+Vector	vector.h	/^class Vector {$/;"	c
+Vertex	vertex.cpp	/^Vertex::Vertex(Vector v,int _id) {$/;"	f	class:Vertex
+Vertex	vertex.h	/^class Vertex {$/;"	c
+WARNINGS	Makefile	/^WARNINGS =-Wfatal-errors -Werror -Wchar-subscripts -Wparentheses -Wreturn-type -Wmissing-braces -Wundef -Wshadow$/;"	m
+allocate	list.h	/^        void allocate(int s){$/;"	f	class:List
+angle	vector.h	/^	 float angle(){return (float)(acos(r)*2.0);}$/;"	f	class:Quaternion
+array_size	list.h	/^        int array_size;$/;"	m	class:List
+axis	vector.h	/^	 Vector axis(){Vector a(x,y,z); return a*(float)(1\/sin(angle()\/2.0));}$/;"	f	class:Quaternion
+collapse	vertex.h	/^    Vertex *         collapse; \/\/ candidate vertex for collapse$/;"	m	class:Vertex
+comp	Makefile	/^comp =clang++$/;"	m
+concurrent	vector.cpp	/^int concurrent(Vector a,Vector b) {$/;"	f
+element	list.h	/^       Type * element;$/;"	m	class:List
+face	vertex.h	/^    List<Triangle *> face;     \/\/ adjacent triangles$/;"	m	class:Vertex
+getmatrix	vector.h	/^	 matrix  getmatrix(){return matrix(xdir(),ydir(),zdir());}$/;"	f	class:Quaternion
+id	vertex.h	/^    int              id;       \/\/ place of vertex in original list$/;"	m	class:Vertex
+magnitude	vector.cpp	/^float magnitude(Vector v) {$/;"	f
 main	run.cpp	/^int main () {$/;"	f
-parsePolyLine	run.cpp	/^void parsePolyLine(std::string line, List<tridata> & triList){$/;"	f
+matrix	vector.h	/^	matrix(){x=Vector(1.0f,0.0f,0.0f);$/;"	f	class:matrix
+matrix	vector.h	/^	matrix(Vector _x,Vector _y,Vector _z){x=_x;y=_y;z=_z;};$/;"	f	class:matrix
+matrix	vector.h	/^class matrix{$/;"	c
+neighbor	vertex.h	/^    List<Vertex *>   neighbor; \/\/ adjacent vertices$/;"	m	class:Vertex
+normal	triangle.h	/^    Vector           normal;    \/\/ unit vector othogonal to this face$/;"	m	class:Triangle
+normalize	vector.cpp	/^Vector normalize(Vector v) {$/;"	f
+num	list.h	/^        int num;$/;"	m	class:List
+objdist	vertex.h	/^    float            objdist;  \/\/ cached cost of collapsing edge$/;"	m	class:Vertex
+operator *	vector.cpp	/^Quaternion operator*(Quaternion a,Quaternion b) {$/;"	f
+operator *	vector.cpp	/^Quaternion operator*(Quaternion a,float b) {$/;"	f
+operator *	vector.cpp	/^Vector operator*(Quaternion q,Vector v) {$/;"	f
+operator *	vector.cpp	/^Vector operator*(Vector v,Quaternion q){$/;"	f
+operator *	vector.cpp	/^Vector operator*(Vector v1,Vector v2) {$/;"	f
+operator *	vector.cpp	/^Vector operator*(Vector v1,float s)   {return Vector(v1.x*s,v1.y*s,v1.z*s);}$/;"	f
+operator *	vector.cpp	/^Vector operator*(float s, Vector v1)  {return Vector(v1.x*s,v1.y*s,v1.z*s);}$/;"	f
+operator *	vector.cpp	/^Vector operator*(matrix m,Vector v){$/;"	f
+operator *	vector.cpp	/^matrix operator*(matrix m1,matrix m2){$/;"	f
+operator +	vector.cpp	/^Quaternion operator+(Quaternion a,Quaternion b) {$/;"	f
+operator +	vector.cpp	/^Vector operator+(Vector v1,Vector v2) {return Vector(v1.x+v2.x,v1.y+v2.y,v1.z+v2.z);}$/;"	f
+operator -	vector.cpp	/^Quaternion operator-(Quaternion q) {$/;"	f
+operator -	vector.cpp	/^Vector operator-(Vector v)            {return Vector(-v.x,-v.y,-v.z);}$/;"	f
+operator -	vector.cpp	/^Vector operator-(Vector v1,Vector v2) {return Vector(v1.x-v2.x,v1.y-v2.y,v1.z-v2.z);}$/;"	f
+operator /	vector.cpp	/^Vector operator\/(Vector v1,float s)   {return v1*(1.0f\/s);}$/;"	f
+operator []	list.h	/^        Type &operator[](int i){assert(i>=0 && i<num); return element[i];}$/;"	f	class:List
+operator ^	vector.cpp	/^float  operator^(Vector v1,Vector v2) {return v1.x*v2.x + v1.y*v2.y + v1.z*v2.z;}$/;"	f
+operator ^	vector.cpp	/^float operator^(Quaternion a,Quaternion b) {$/;"	f
+operator float *	vector.h	/^	operator float *() { return &x;};$/;"	f	class:Vector
+parsePolyLine	run.cpp	/^void parsePolyLine(std::string line){$/;"	f
 parseVertice	run.cpp	/^void parseVertice(const std::string & line) {$/;"	f
+planelineintersection	vector.cpp	/^Vector planelineintersection(Vector n,float d,Vector p1,Vector p2){$/;"	f
+position	vertex.h	/^    Vector           position; \/\/ location of point in euclidean space$/;"	m	class:Vertex
+r	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+slerp	vector.cpp	/^Quaternion slerp(Quaternion a,Quaternion b,float interp){$/;"	f
 splitString	run.cpp	/^unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)$/;"	f
+sqr	vector.cpp	/^float sqr(float a) {return a*a;}$/;"	f
+transpose	vector.cpp	/^matrix transpose(matrix m) {$/;"	f
+tri	run.cpp	/^List<tridata> tri;$/;"	v
+tridata	progmesh.h	/^class tridata {$/;"	c
+v	progmesh.h	/^	int	v[3];  \/\/ indices to vertex list$/;"	m	class:tridata
 validateAndCreateVertex	run.cpp	/^Vertex * validateAndCreateVertex(std::vector<std::string> strings, int id){$/;"	f
 vert	run.cpp	/^List<Vector> vert;$/;"	v
+vertex	triangle.h	/^    Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle
+verts	Face.h	/^        vector<Vec3 *> verts;$/;"	m	class:Face
+x	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+x	vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+x	vector.h	/^	float x,y,z;$/;"	m	class:Vector
+xdir	vector.h	/^	 Vector xdir(){return Vector(1-2*(y*y+z*z),  2*(x*y+r*z),  2*(x*z-r*y));}$/;"	f	class:Quaternion
+y	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+y	vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+y	vector.h	/^	float x,y,z;$/;"	m	class:Vector
+ydir	vector.h	/^	 Vector ydir(){return Vector(  2*(x*y-r*z),1-2*(x*x+z*z),  2*(y*z+r*x));}$/;"	f	class:Quaternion
+z	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
+z	vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
+z	vector.h	/^	float x,y,z;$/;"	m	class:Vector
+zdir	vector.h	/^	 Vector zdir(){return Vector(  2*(x*z+r*y),  2*(y*z-r*x),1-2*(x*x+y*y));}$/;"	f	class:Quaternion
+~Triangle	triangle.cpp	/^Triangle::~Triangle(){$/;"	f	class:Triangle
+~Vertex	vertex.cpp	/^Vertex::~Vertex(){$/;"	f	class:Vertex

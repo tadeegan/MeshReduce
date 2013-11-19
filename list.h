@@ -29,9 +29,11 @@ class List {
         }
 
         List(){
+            /*
             if (element != NULL) {
                 delete element;
             }
+            */
         }
 
         void allocate(int s){
@@ -44,7 +46,7 @@ class List {
             for(int i=0;i<num;i++){
                 element[i]=old[i];
             }
-            if(old) delete old;
+            //if(old) delete old;
         }
 
         void SetSize(int s){

@@ -1,4 +1,5 @@
 #include "progmesh.h"
+#include <iostream>
 
 float ComputeEdgeCollapseCost(Vertex *u,Vertex *v) {
 

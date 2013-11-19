@@ -89,7 +89,6 @@ void parseVertice(const std::string & line) {
     double double_y = ::atof(y.c_str());
     double double_z = ::atof(z.c_str());
     vert.Add(Vector(double_x, double_y, double_z));
-    std::cout<<"x : "<< double_x << " y : " << double_y << " z : " << double_z << std::endl;
 }
 
 int main () {
@@ -98,7 +97,7 @@ int main () {
     std::cout << "decimating file" << std::endl;
 
     std::string line;
-    std::ifstream myfile ("bunny.obj");
+    std::ifstream myfile ("box.obj");
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )
@@ -110,15 +109,6 @@ int main () {
             else if(line[0] == 'v'){
                 parseVertice(line);
             }
-            /*
-               else if(line[0] == 'v'){
-               std::vector<std::string> stringSplits;
-               splitString(line, stringSplits, ' ');
-               Vertex * temp = validateAndCreateVertex(stringSplits, numVerts);
-               numVerts++;
-               vertices.Add(temp);
-               }
-               */
         }
         myfile.close();
     }
@@ -127,7 +117,7 @@ int main () {
     }
     List<int> permutation(0);
     List<int> mm(0);
-    //ProgressiveMesh(vert, tri, mm, permutation); 
+    ProgressiveMesh(vert, tri, mm, permutation);
     //reduce
 
     return 0;

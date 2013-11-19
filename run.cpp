@@ -7,8 +7,8 @@
 #include <vector>
 #include <stdlib.h>   
 
-List<Vertex *> vertices;
-List<Triangle *> triangles;
+List<Vertex *> vertices(0);
+List<Triangle *> triangles(0);
 
 unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)
 {
@@ -51,8 +51,8 @@ void parsePolyLine(std::string line){
         indicies[i-1] = atoi(stringSplits[i].c_str()) - 1;
     }
 
-    int num_traingles = num_verts - 2;
-    for(int i = 0; i < num_traingles; i++){
+    int num_triangles = num_verts - 2;
+    for(int i = 0; i < num_triangles; i++){
         std::cout << line << std::endl;
         std::cout << "making triangle: " << indicies[0] << " " << indicies[1+i] << " " << indicies[2+i] << std::endl;
         Triangle * temp = new Triangle(vertices[indicies[0]], vertices[indicies[1+i]], vertices[indicies[2+i]]);

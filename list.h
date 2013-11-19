@@ -29,7 +29,9 @@ class List {
         }
 
         List(){
-            delete element;
+            //if (element != NULL) {
+                delete element;
+            //}
         }
 
         void allocate(int s){

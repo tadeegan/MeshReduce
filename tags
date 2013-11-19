@@ -256,7 +256,6 @@ t	src/bunnygut.cpp	/^	float t;   \/\/ timestamp$/;"	m	struct:keyframethings	file
 transpose	src/vector.cpp	/^matrix transpose(matrix m) {$/;"	f
 transpose	vector.cpp	/^matrix transpose(matrix m) {$/;"	f
 tri	src/bunnygut.cpp	/^List<tridata> tri;       \/\/ global list of triangles$/;"	v
-triangles	run.cpp	/^List<Triangle *> triangles;$/;"	v
 triangles	src/progmesh.cpp	/^List<Triangle *> triangles;$/;"	v
 tridata	progmesh.h	/^class tridata {$/;"	c
 tridata	src/progmesh.h	/^class tridata {$/;"	c
@@ -266,7 +265,6 @@ validateAndCreateVertex	run.cpp	/^Vertex * validateAndCreateVertex(std::vector<s
 vert	src/bunnygut.cpp	/^List<Vector> vert;       \/\/ global list of vertices$/;"	v
 vertex	src/progmesh.cpp	/^	Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle	file:
 vertex	triangle.h	/^    Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle
-vertices	run.cpp	/^List<Vertex *> vertices;$/;"	v
 vertices	src/progmesh.cpp	/^List<Vertex *>   vertices;$/;"	v
 verts	Face.h	/^        vector<Vec3 *> verts;$/;"	m	class:Face
 verts	Triangle.h	/^        Vertex * verts[3];\/\/ the 3 points that make this tri$/;"	m	class:Triangle

@@ -6,7 +6,7 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 Add	list.h	/^        void Add(Type t){$/;"	f
 main	run.cpp	/^int main () {$/;"	f
-parsePolyLine	run.cpp	/^void parsePolyLine(std::string line){$/;"	f
+parsePolyLine	run.cpp	/^void parsePolyLine(std::string line, List<tridata> & triList){$/;"	f
 parseVertice	run.cpp	/^void parseVertice(const std::string & line) {$/;"	f
 splitString	run.cpp	/^unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)$/;"	f
 validateAndCreateVertex	run.cpp	/^Vertex * validateAndCreateVertex(std::vector<std::string> strings, int id){$/;"	f

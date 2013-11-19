@@ -91,6 +91,25 @@ void parseVertice(const std::string & line) {
     vert.Add(Vector(double_x, double_y, double_z));
 }
 
+void PermuteVertices(List<int> &permutation) {
+    // rearrange the vertex list 
+    List<Vector> temp_list;
+    int i;
+    assert(permutation.num==vert.num);
+    for(i=0;i<vert.num;i++) {
+        temp_list.Add(vert[i]);
+    }
+    for(i=0;i<vert.num;i++) {
+        vert[permutation[i]]=temp_list[i];
+    }
+    // update the changes in the entries in the triangle list
+    for(i=0;i<tri.num;i++) {
+        for(int j=0;j<3;j++) {
+            tri[i].v[j] = permutation[tri[i].v[j]];
+        }
+    }
+}
+
 int main () {
     int numVerts = 1;
 
@@ -115,10 +134,15 @@ int main () {
     else{
         std::cout << "Unable to open file"; 
     }
-    List<int> permutation(0);
-    List<int> mm(0);
+    List<int> permutation;
+    List<int> mm;
+    
+    std::cout << "before vert num: " << vert.num << std::endl;
     ProgressiveMesh(vert, tri, mm, permutation);
-    //reduce
+    PermuteVertices(permutation);
+    std::cout << "vert num: " << vert.num << std::endl;
+    std::cout << "permutation num: " << permutation.num << std::endl;
+    std::cout << "mm num: " << mm.num << std::endl;
 
     return 0;
 }

@@ -29,11 +29,12 @@ class List {
         }
 
         List(){
-            /*
-            if (element != NULL) {
-                delete element;
+            num=0;
+            array_size = 0;
+            element = NULL;
+            if(1) {
+                allocate(1);
             }
-            */
         }
 
         void allocate(int s){

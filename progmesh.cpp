@@ -137,6 +137,7 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri,
     while(vertices.num > 0) {
         // get the next vertex to collapse
         Vertex *mn = MinimumCostEdge();
+        std::cout << "min cost edge: " << mn << " num left: " << vertices.num <<  std::endl;
         // keep track of this vertex, i.e. the collapse ordering
         permutation[mn->id]=vertices.num-1;
         // keep track of vertex to which we collapse to

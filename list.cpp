@@ -1,6 +1,9 @@
+/*
 #include "list.h"
+//#include "triangle.h"
+//#include "vertex.h"
 
-template <class Type>
+template <typename Type>
 List<Type>::List(int s){
     num=0;
     array_size = 0;
@@ -10,12 +13,12 @@ List<Type>::List(int s){
     }
 }
 
-template <class Type>
-List<Type>::~List<Type>(){
+template <typename Type>
+List<Type>::~List(){
     delete element;
 }
 
-template <class Type>
+template <typename Type>
 void List<Type>::allocate(int s){
     assert(s>0);
     assert(s>=num);
@@ -29,18 +32,18 @@ void List<Type>::allocate(int s){
     if(old) delete old;
 }
 
-template <class Type>
+template <typename Type>
 void List<Type>::SetSize(int s){
     if(s==0) { if(element) delete element;}
     else {  allocate(s); }
     num=s;
 }
-template <class Type>
+template <typename Type>
 void List<Type>::Pack(){
     allocate(num);
 }
 
-template <class Type>
+template <typename Type>
 void List<Type>::Add(Type t){
     assert(num<=array_size);
     if(num==array_size) {
@@ -54,7 +57,7 @@ void List<Type>::Add(Type t){
     element[num++] = t;
 }
 
-template <class Type>
+template <typename Type>
 int List<Type>::Contains(Type t){
     int i;
     int count=0;
@@ -64,13 +67,13 @@ int List<Type>::Contains(Type t){
     return count;
 }
 
-template <class Type>
+template <typename Type>
 void List<Type>::AddUnique(Type t){
     if(!Contains(t)) Add(t);
 }
 
 
-template <class Type>
+template <typename Type>
 void List<Type>::DelIndex(int i){
     assert(i<num);
     num--;
@@ -80,7 +83,7 @@ void List<Type>::DelIndex(int i){
     }
 }
 
-template <class Type>
+template <typename Type>
 void List<Type>::Remove(Type t){
     int i;
     for(i=0;i<num;i++) {
@@ -92,4 +95,16 @@ void List<Type>::Remove(Type t){
     for(i=0;i<num;i++) {
         assert(element[i] != t);
     }
+
 }
+
+
+ * This function instantiates vertain template types to avoid linker errors.
+
+template <typename Type>
+void List<Type>::declarations() {
+    List<Vertex *> vertexList;
+    List<Triangle *> triangleList;
+}
+*/
+

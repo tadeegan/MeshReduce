@@ -7,6 +7,9 @@
 #include <vector>
 #include <stdlib.h>   
 
+List<Vertex *> vertices;
+List<Triangle *> triangles;
+
 unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)
 {
     size_t pos = txt.find( ch );

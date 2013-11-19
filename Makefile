@@ -9,16 +9,16 @@ EXEC =testing
 $(EXEC): $(OBJS)
 	$(comp) $(OBJS) -o $(EXEC)  
 
-run.o: run.cpp vector.o vertex.o triangle.o
+run.o: run.cpp vector.h vertex.h triangle.h
 	$(comp) $(CXX_OPTS) run.cpp 
 
-progmesh.o: progmesh.cpp list.o vector.o vertex.o
+progmesh.o: progmesh.cpp list.cpp list.h vector.h vertex.h
 	$(comp) $(CXX_OPTS) progmesh.cpp 
 
-vertex.o: vertex.cpp vertex.o vector.o list.o
+vertex.o: vertex.cpp vector.h list.cpp list.h
 	$(comp) $(CXX_OPTS) vertex.cpp 
 
-triangle.o: triangle.cpp vector.o list.o 
+triangle.o: triangle.cpp vector.cpp list.cpp list.h
 	$(comp) $(CXX_OPTS) triangle.cpp 
 
 list.o: list.cpp list.h

@@ -4,9 +4,11 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+Add	list.h	/^        void Add(Type t){$/;"	f	class:List
 Add	src/list.h	/^void List<Type>::Add(Type t){$/;"	f	class:List
 AddFaces	progmesh.cpp	/^void AddFaces(List<tridata> &tri){$/;"	f
 AddFaces	src/progmesh.cpp	/^void AddFaces(List<tridata> &tri){$/;"	f
+AddUnique	list.h	/^            void AddUnique(Type t){$/;"	f	class:List
 AddUnique	src/list.h	/^void List<Type>::AddUnique(Type t){$/;"	f	class:List
 AddVertex	progmesh.cpp	/^void AddVertex(List<Vector> &vert){$/;"	f
 AddVertex	src/progmesh.cpp	/^void AddVertex(List<Vector> &vert){$/;"	f
@@ -24,8 +26,10 @@ ComputeEdgeCostAtVertex	src/progmesh.cpp	/^void ComputeEdgeCostAtVertex(Vertex *
 ComputeMouseVector	src/winmain.cpp	/^void ComputeMouseVector(){$/;"	f
 ComputeNormal	src/progmesh.cpp	/^void Triangle::ComputeNormal(){$/;"	f	class:Triangle
 ComputeNormal	triangle.cpp	/^void Triangle::ComputeNormal(){$/;"	f	class:Triangle
+Contains	list.h	/^        int Contains(Type t){$/;"	f	class:List
 Contains	src/list.h	/^int List<Type>::Contains(Type t){$/;"	f	class:List
 CreateOpenGLWindow	src/winmain.cpp	/^HWND CreateOpenGLWindow(char* title)$/;"	f
+DelIndex	list.h	/^        void DelIndex(int i){$/;"	f	class:List
 DelIndex	src/list.h	/^void List<Type>::DelIndex(int i){$/;"	f	class:List
 DeltaT	src/winmain.cpp	/^float   DeltaT = 0.1f;$/;"	v
 Display	src/winmain.cpp	/^void Display(){$/;"	f
@@ -34,6 +38,7 @@ EXEC	Makefile	/^EXEC =testing$/;"	m
 FONT_H	src/font.h	2;"	d
 FPS	src/winmain.cpp	/^float   FPS;$/;"	v
 Face	Face.h	/^class Face{$/;"	c
+GENERIC_LIST_H	list.h	6;"	d
 GENERIC_LIST_H	src/list.h	7;"	d
 GENERIC_VECTOR_H	src/vector.h	8;"	d
 GENERIC_VECTOR_H	vector.h	8;"	d
@@ -42,6 +47,9 @@ HasVertex	src/progmesh.cpp	/^int Triangle::HasVertex(Vertex *v) {$/;"	f	class:Tr
 HasVertex	triangle.cpp	/^int Triangle::HasVertex(Vertex *v) {$/;"	f	class:Triangle
 Height	src/winmain.cpp	/^int 	Height = 512;$/;"	v
 InitModel	src/bunnygut.cpp	/^void InitModel() {$/;"	f
+List	list.h	/^        List(){$/;"	f	class:List
+List	list.h	/^        List(int s){$/;"	f	class:List
+List	list.h	/^class List {$/;"	c
 List	src/list.h	/^List<Type>::List(int s){$/;"	f	class:List
 List	src/list.h	/^template <class Type> class List {$/;"	c
 MakeRasterFont	src/font.cpp	/^static void MakeRasterFont(void){$/;"	f	file:
@@ -56,6 +64,7 @@ OBJS	Makefile	/^OBJS =run.o vector.o vertex.o triangle.o list.o progmesh.o$/;"	m
 OldMouseVector	src/winmain.cpp	/^Vector  OldMouseVector;$/;"	v
 PROGRESSIVE_MESH_H	progmesh.h	19;"	d
 PROGRESSIVE_MESH_H	src/progmesh.h	19;"	d
+Pack	list.h	/^        void Pack(){$/;"	f	class:List
 Pack	src/list.h	/^void List<Type>::Pack(){$/;"	f	class:List
 PermuteVertices	src/bunnygut.cpp	/^void PermuteVertices(List<int> &permutation) {$/;"	f
 Post	src/font.cpp	/^void PostedString::Post() {$/;"	f	class:PostedString
@@ -78,6 +87,7 @@ Quaternion	vector.h	/^class Quaternion{$/;"	c
 RABBIT_DATA_H	src/rabdata.h	21;"	d
 RABBIT_TRIANGLE_NUM	src/rabdata.h	24;"	d
 RABBIT_VERTEX_NUM	src/rabdata.h	23;"	d
+Remove	list.h	/^        void Remove(Type t){$/;"	f	class:List
 Remove	src/list.h	/^void List<Type>::Remove(Type t){$/;"	f	class:List
 RemoveIfNonNeighbor	src/progmesh.cpp	/^void Vertex::RemoveIfNonNeighbor(Vertex *n) {$/;"	f	class:Vertex
 RemoveIfNonNeighbor	vertex.cpp	/^void Vertex::RemoveIfNonNeighbor(Vertex *n) {$/;"	f	class:Vertex
@@ -86,6 +96,7 @@ RenderStrings	src/font.cpp	/^void RenderStrings() {$/;"	f
 ReplaceVertex	src/progmesh.cpp	/^void Triangle::ReplaceVertex(Vertex *vold,Vertex *vnew) {$/;"	f	class:Triangle
 ReplaceVertex	triangle.cpp	/^void Triangle::ReplaceVertex(Vertex *vold,Vertex *vnew) {$/;"	f	class:Triangle
 Reshape	src/winmain.cpp	/^void Reshape(int width, int height){$/;"	f
+SetSize	list.h	/^        void SetSize(int s){$/;"	f	class:List
 SetSize	src/list.h	/^void List<Type>::SetSize(int s){$/;"	f	class:List
 SpinIt	src/winmain.cpp	/^void SpinIt(){$/;"	f
 SpitLetters	src/font.cpp	/^void SpitLetters(char *s) {$/;"	f
@@ -118,9 +129,11 @@ WARNINGS	Makefile	/^WARNINGS =-Wfatal-errors -Werror -Wchar-subscripts -Wparenth
 Width	src/winmain.cpp	/^int 	Width  = 512;$/;"	v
 WinMain	src/winmain.cpp	/^int APIENTRY WinMain(HINSTANCE hCurrentInst, HINSTANCE hPreviousInst,$/;"	f
 WindowProc	src/winmain.cpp	/^LONG WINAPI WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)$/;"	f
+allocate	list.h	/^        void allocate(int s){$/;"	f	class:List
 allocate	src/list.h	/^void List<Type>::allocate(int s){$/;"	f	class:List
 angle	src/vector.h	/^	 float angle(){return (float)(acos(r)*2.0);}$/;"	f	class:Quaternion
 angle	vector.h	/^	 float angle(){return (float)(acos(r)*2.0);}$/;"	f	class:Quaternion
+array_size	list.h	/^        int array_size;$/;"	m	class:List
 array_size	src/list.h	/^		int		array_size;$/;"	m	class:List
 axis	src/vector.h	/^	 Vector axis(){Vector a(x,y,z); return a*(float)(1\/sin(angle()\/2.0));}$/;"	f	class:Quaternion
 axis	vector.h	/^	 Vector axis(){Vector a(x,y,z); return a*(float)(1\/sin(angle()\/2.0));}$/;"	f	class:Quaternion
@@ -134,6 +147,7 @@ concurrent	vector.cpp	/^int concurrent(Vector a,Vector b) {$/;"	f
 cost	Vertex.h	/^        float cost; \/\/ cached cost of collapsing edge$/;"	m	class:Vertex
 dm	src/bunnygut.cpp	/^	float dm;  \/\/ rate of change in "m"$/;"	m	struct:keyframethings	file:
 dn	src/bunnygut.cpp	/^	float dn;  \/\/ rate of change in "n"$/;"	m	struct:keyframethings	file:
+element	list.h	/^       Type * element;$/;"	m	class:List
 element	src/list.h	/^		Type *	element;$/;"	m	class:List
 face	Vertex.h	/^        list<Triangle *> face; \/\/ adjacent triangles$/;"	m	class:Vertex
 face	src/progmesh.cpp	/^	List<Triangle *> face;     \/\/ adjacent triangles$/;"	m	class:Vertex	file:
@@ -175,6 +189,7 @@ normal	src/progmesh.cpp	/^	Vector           normal;    \/\/ unit vector othogona
 normal	triangle.h	/^    Vector           normal;    \/\/ unit vector othogonal to this face$/;"	m	class:Triangle
 normalize	src/vector.cpp	/^Vector normalize(Vector v) {$/;"	f
 normalize	vector.cpp	/^Vector normalize(Vector v) {$/;"	f
+num	list.h	/^        int num;$/;"	m	class:List
 num	src/list.h	/^		int		num;$/;"	m	class:List
 objdist	src/progmesh.cpp	/^	float            objdist;  \/\/ cached cost of collapsing edge$/;"	m	class:Vertex	file:
 objdist	vertex.h	/^    float            objdist;  \/\/ cached cost of collapsing edge$/;"	m	class:Vertex
@@ -209,6 +224,7 @@ operator -	vector.cpp	/^Vector operator-(Vector v)            {return Vector(-v.
 operator -	vector.cpp	/^Vector operator-(Vector v1,Vector v2) {return Vector(v1.x-v2.x,v1.y-v2.y,v1.z-v2.z);}$/;"	f
 operator /	src/vector.cpp	/^Vector operator\/(Vector v1,float s)   {return v1*(1.0f\/s);}$/;"	f
 operator /	vector.cpp	/^Vector operator\/(Vector v1,float s)   {return v1*(1.0f\/s);}$/;"	f
+operator []	list.h	/^        Type &operator[](int i){assert(i>=0 && i<num); return element[i];}$/;"	f	class:List
 operator []	src/list.h	/^		Type	&operator[](int i){assert(i>=0 && i<num); return element[i];}$/;"	f	class:List
 operator ^	src/vector.cpp	/^float  operator^(Vector v1,Vector v2) {return v1.x*v2.x + v1.y*v2.y + v1.z*v2.z;}$/;"	f
 operator ^	src/vector.cpp	/^float operator^(Quaternion a,Quaternion b) {$/;"	f
@@ -240,6 +256,7 @@ t	src/bunnygut.cpp	/^	float t;   \/\/ timestamp$/;"	m	struct:keyframethings	file
 transpose	src/vector.cpp	/^matrix transpose(matrix m) {$/;"	f
 transpose	vector.cpp	/^matrix transpose(matrix m) {$/;"	f
 tri	src/bunnygut.cpp	/^List<tridata> tri;       \/\/ global list of triangles$/;"	v
+triangles	run.cpp	/^List<Triangle *> triangles;$/;"	v
 triangles	src/progmesh.cpp	/^List<Triangle *> triangles;$/;"	v
 tridata	progmesh.h	/^class tridata {$/;"	c
 tridata	src/progmesh.h	/^class tridata {$/;"	c
@@ -249,6 +266,7 @@ validateAndCreateVertex	run.cpp	/^Vertex * validateAndCreateVertex(std::vector<s
 vert	src/bunnygut.cpp	/^List<Vector> vert;       \/\/ global list of vertices$/;"	v
 vertex	src/progmesh.cpp	/^	Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle	file:
 vertex	triangle.h	/^    Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle
+vertices	run.cpp	/^List<Vertex *> vertices;$/;"	v
 vertices	src/progmesh.cpp	/^List<Vertex *>   vertices;$/;"	v
 verts	Face.h	/^        vector<Vec3 *> verts;$/;"	m	class:Face
 verts	Triangle.h	/^        Vertex * verts[3];\/\/ the 3 points that make this tri$/;"	m	class:Triangle

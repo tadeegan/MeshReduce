@@ -27,7 +27,7 @@ Vector operator-(Vector v1,Vector v2);
 Vector operator*(Vector v1,float s)   ;
 Vector operator*(float s,Vector v1)   ;
 Vector operator/(Vector v1,float s)   ;
-float   operator^(Vector v1,Vector v2);  // DOT product
+float  operator^(Vector v1,Vector v2);  // DOT product
 Vector operator*(Vector v1,Vector v2);   // CROSS product
 Vector planelineintersection(Vector n,float d,Vector p1,Vector p2);
 

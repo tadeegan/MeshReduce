@@ -3,12 +3,13 @@
 #include "vector.h"
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <string> 
 #include <vector>
 #include <stdlib.h>   
 
 List<Vertex *> vertices(0);
 List<Triangle *> triangles(0);
+List<Vector> vert;
 
 unsigned int splitString(const std::string &txt, std::vector<std::string> &strs, char ch)
 {
@@ -60,11 +61,38 @@ void parsePolyLine(std::string line){
     }
 }
 
+void parseVertice(const std::string & line) {
+    int counter = 0;
+    std::string x = "";
+    std::string y = "";
+    std::string z = "";
+    for (int i = 1; i < line.length(); ++i) {
+        if (line[i] == ' ') {
+            ++counter;
+            continue;
+        }
+        if (counter == 1) {
+            x += line[i];
+        }
+        else if (counter == 2) {
+            y += line[i];
+        }
+        else{
+            z += line[i];
+        }
+    }
+    double double_x = ::atof(x.c_str());
+    double double_y = ::atof(y.c_str());
+    double double_z = ::atof(z.c_str());
+    vert.Add(Vector(double_x, double_y, double_z));
+    std::cout<<"x : "<< double_x << " y : " << double_y << " z : " << double_z << std::endl;
+}
+
 int main () {
     int numVerts = 1;
 
     std::cout << "decimating file" << std::endl;
- 
+
     std::string line;
     std::ifstream myfile ("bunny.obj");
     if (myfile.is_open())
@@ -73,15 +101,20 @@ int main () {
         {
             //std::std::cout << line << std::std::endl;
             if(line[0] == 'f'){
-                parsePolyLine(line);
+                //parsePolyLine(line);
             }
             else if(line[0] == 'v'){
-                std::vector<std::string> stringSplits;
-                splitString(line, stringSplits, ' ');
-                Vertex * temp = validateAndCreateVertex(stringSplits, numVerts);
-                numVerts++;
-                vertices.Add(temp);
+                parseVertice(line);
             }
+            /*
+               else if(line[0] == 'v'){
+               std::vector<std::string> stringSplits;
+               splitString(line, stringSplits, ' ');
+               Vertex * temp = validateAndCreateVertex(stringSplits, numVerts);
+               numVerts++;
+               vertices.Add(temp);
+               }
+               */
         }
         myfile.close();
     }

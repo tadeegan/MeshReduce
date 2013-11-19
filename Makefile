@@ -1,6 +1,6 @@
 comp =clang++
 
-CXX_OPTS =-c -g -O0  $(WARNINGS)
+CXX_OPTS =-c -g $(WARNINGS)
 WARNINGS =-Wfatal-errors -Werror -Wchar-subscripts -Wparentheses -Wreturn-type -Wmissing-braces -Wundef -Wshadow
 OBJS =run.o vector.o vertex.o triangle.o list.o progmesh.o
 

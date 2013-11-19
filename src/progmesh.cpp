@@ -49,6 +49,7 @@ class Vertex {
 	                 ~Vertex();
 	void             RemoveIfNonNeighbor(Vertex *n);
 };
+
 List<Vertex *>   vertices;
 List<Triangle *> triangles;
 

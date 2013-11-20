@@ -56,7 +56,7 @@ void parsePolyLine(std::string line){
 
     int num_triangles = num_verts - 2;
     for(int i = 0; i < num_triangles; i++){
-        std::cout << line << std::endl;
+        //std::cout << line << std::endl;
         tridata td;
 	td.v[0]=indicies[0];
 	td.v[1]=indicies[1+i];
@@ -113,7 +113,7 @@ void PermuteVertices(List<int> &permutation) {
 int main () {
     int numVerts = 1;
 
-    std::cout << "decimating file" << std::endl;
+    //std::cout << "decimating file" << std::endl;
 
     std::string line;
     std::ifstream myfile ("models/box.obj");
@@ -137,12 +137,12 @@ int main () {
     List<int> permutation;
     List<int> mm;
     
-    std::cout << "before vert num: " << vert.num << std::endl;
+    //std::cout << "before vert num: " << vert.num << std::endl;
     ProgressiveMesh(vert, tri, mm, permutation, 0.5f);
     //PermuteVertices(permutation);
-    std::cout << "vert num: " << vert.num << std::endl;
-    std::cout << "permutation num: " << permutation.num << std::endl;
-    std::cout << "mm num: " << mm.num << std::endl;
+    //std::cout << "vert num: " << vert.num << std::endl;
+    //std::cout << "permutation num: " << permutation.num << std::endl;
+    //std::cout << "mm num: " << mm.num << std::endl;
 
     return 0;
 }

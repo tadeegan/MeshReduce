@@ -148,13 +148,19 @@ void writeToFile() {
     for (int i = 0; i < vertices.num; i++) {
         std::string verticeLine = "v " + getStringFromDouble(vertices[i]->position.x) + " "  + getStringFromDouble(vertices[i]->position.y) + " " + getStringFromDouble(vertices[i]->position.z) + "\n";
         myFile << verticeLine;
+        printf ("\r%f%% rendering vertices", 100.0*(float)(i)/(float)(vertices.num));
+        fflush (stdout);
     }
+    printf ("\r%f%% rendering vertices .. done\n", 100.0f);
     for (int i = 0; i < triangles.num; i++ ) {
         int firstVertexIndex = getIndexForVertex(triangles[i]->vertex[0]); 
         int secondVertexindex = getIndexForVertex(triangles[i]->vertex[1]); 
         int thirdVertexindex = getIndexForVertex(triangles[i]->vertex[2]); 
         myFile << "f " << firstVertexIndex << " " << secondVertexindex << " " << thirdVertexindex << "\n";
+        printf ("\r%f%% rendering faces", 100.0*(float)(i)/(float)(triangles.num));
+        fflush (stdout);
     }
+    printf ("\r%f%% rendering faces .. done\n", 100.0f);
     myFile.close();
 }
 
@@ -170,6 +176,7 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, Lis
     map.SetSize(vertices.num);          // allocate space
     // reduce the object down to nothing:
     int remaining = (int)((float)vertices.num * percentage);
+    int inital = vertices.num;
     while(vertices.num > remaining) {
         // get the next vertex to collapse
         Vertex *mn = MinimumCostEdge();
@@ -180,8 +187,11 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, Lis
         map[vertices.num-1] = (mn->collapse)?mn->collapse->id:-1;
         // Collapse this edge
         Collapse(mn,mn->collapse);
+        printf ("\r%f%% reducing", 100.0*(float)(inital-vertices.num)/(float)(inital-remaining));
+        fflush (stdout);
     }
-    
+    printf ("\r%f%% reducing .. done\n", 100.0);
+
     writeToFile();
     // reorder the map list based on the collapse ordering
     /*

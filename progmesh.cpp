@@ -1,5 +1,7 @@
 #include "progmesh.h"
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 float ComputeEdgeCollapseCost(Vertex *u,Vertex *v) {
 
@@ -125,7 +127,28 @@ Vertex *MinimumCostEdge(){
     return mn;
 }
 
+std::string getStringFromDouble(double num) {
+    std::ostringstream sstream;
+    sstream << num;
+    std::string varAsString = sstream.str();
+    return varAsString;
+}
+
+
+void writeToFile() {
+    std::ofstream myFile;
+    myFile.open("example.obj");
+    for (int i = 0; i < vertices.num; i++) {
+        std::string verticeLine = " v " + getStringFromDouble(vertices[i]->position.x) + getStringFromDouble(vertices[i]->position.y) + getStringFromDouble(vertices[i]->position.z) + "\n";
+        myFile << "v " << verticeLine;
+    }
+    myFile.close();
+}
+
+
+
 void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, List<int> &permutation , float percentage)
+
 {
     AddVertex(vert);  // put input data into our data structures
     AddFaces(tri);
@@ -145,7 +168,8 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, Lis
         // Collapse this edge
         Collapse(mn,mn->collapse);
     }
-
+    
+    writeToFile();
     // reorder the map list based on the collapse ordering
     for(int i=0;i<map.num;i++) {
         map[i] = (map[i]==-1)?0:permutation[map[i]];

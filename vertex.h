@@ -2,6 +2,7 @@
 #define VERTEX_H
 
 #include "list.h"
+#include "triangle.h"
 #include "vector.h"
 
 class Triangle;
@@ -18,8 +19,5 @@ class Vertex {
                      ~Vertex();
     void             RemoveIfNonNeighbor(Vertex *n);
 };
-
-extern List<Vertex *> vertices;
-
 
 #endif

@@ -139,7 +139,7 @@ int main () {
     
     std::cout << "before vert num: " << vert.num << std::endl;
     ProgressiveMesh(vert, tri, mm, permutation, 0.5f);
-    PermuteVertices(permutation);
+    //PermuteVertices(permutation);
     std::cout << "vert num: " << vert.num << std::endl;
     std::cout << "permutation num: " << permutation.num << std::endl;
     std::cout << "mm num: " << mm.num << std::endl;

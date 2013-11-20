@@ -28,7 +28,8 @@ MinimumCostEdge	progmesh.cpp	/^Vertex *MinimumCostEdge(){$/;"	f
 OBJS	Makefile	/^OBJS =run.o vector.o vertex.o triangle.o list.o progmesh.o$/;"	m
 PROGRESSIVE_MESH_H	progmesh.h	19;"	d
 Pack	list.h	/^        void Pack(){$/;"	f	class:List
-ProgressiveMesh	progmesh.cpp	/^void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, $/;"	f
+PermuteVertices	run.cpp	/^void PermuteVertices(List<int> &permutation) {$/;"	f
+ProgressiveMesh	progmesh.cpp	/^void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, List<int> &permutation , float percentage)$/;"	f
 Quaternion	vector.h	/^	 Quaternion(){x=y=z=0.0f;r=1.0f;};$/;"	f	class:Quaternion
 Quaternion	vector.h	/^	 Quaternion(Vector v,float t){v=normalize(v);r=(float)cos(t\/2.0);v=v*(float)sin(t\/2.0);x=v.x;y=v.y;z=v.z;};$/;"	f	class:Quaternion
 Quaternion	vector.h	/^	 Quaternion(float _r,float _x,float _y,float _z){r=_r;x=_x;y=_y;z=_z;};$/;"	f	class:Quaternion
@@ -55,6 +56,8 @@ comp	Makefile	/^comp =clang++$/;"	m
 concurrent	vector.cpp	/^int concurrent(Vector a,Vector b) {$/;"	f
 element	list.h	/^       Type * element;$/;"	m	class:List
 face	vertex.h	/^    List<Triangle *> face;     \/\/ adjacent triangles$/;"	m	class:Vertex
+getIndexForVertex	progmesh.cpp	/^int getIndexForVertex(const Vertex * vertex) {$/;"	f
+getStringFromDouble	progmesh.cpp	/^std::string getStringFromDouble(double num) {$/;"	f
 getmatrix	vector.h	/^	 matrix  getmatrix(){return matrix(xdir(),ydir(),zdir());}$/;"	f	class:Quaternion
 id	vertex.h	/^    int              id;       \/\/ place of vertex in original list$/;"	m	class:Vertex
 magnitude	vector.cpp	/^float magnitude(Vector v) {$/;"	f
@@ -102,6 +105,7 @@ validateAndCreateVertex	run.cpp	/^Vertex * validateAndCreateVertex(std::vector<s
 vert	run.cpp	/^List<Vector> vert;$/;"	v
 vertex	triangle.h	/^    Vertex *         vertex[3]; \/\/ the 3 points that make this tri$/;"	m	class:Triangle
 verts	Face.h	/^        vector<Vec3 *> verts;$/;"	m	class:Face
+writeToFile	progmesh.cpp	/^void writeToFile() {$/;"	f
 x	vector.h	/^	 float r,x,y,z;$/;"	m	class:Quaternion
 x	vector.h	/^	Vector x,y,z;$/;"	m	class:matrix
 x	vector.h	/^	float x,y,z;$/;"	m	class:Vector

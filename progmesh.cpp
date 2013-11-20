@@ -67,8 +67,7 @@ void ComputeAllEdgeCollapseCosts() {
 
 void Collapse(Vertex *u,Vertex *v){
     // Collapse the edge uv by moving vertex u onto v
-    // Actually remove tris on uv, then update tris that
-    // have u to have v, and then remove u.
+    // Actually remove tris on uv, then update tris that // have u to have v, and then remove u.
     if(!v) {
         // u is a vertex all by itself so just delete it
         delete u;
@@ -134,13 +133,27 @@ std::string getStringFromDouble(double num) {
     return varAsString;
 }
 
+int getIndexForVertex(const Vertex * vertex) {
+    for (int i = 0; i < vertices.num; i++) {
+        if (vertices[i] == vertex) {
+            return i + 1;
+        }
+    }
+    return -1;
+}
 
 void writeToFile() {
     std::ofstream myFile;
     myFile.open("example.obj");
     for (int i = 0; i < vertices.num; i++) {
-        std::string verticeLine = " v " + getStringFromDouble(vertices[i]->position.x) + getStringFromDouble(vertices[i]->position.y) + getStringFromDouble(vertices[i]->position.z) + "\n";
-        myFile << "v " << verticeLine;
+        std::string verticeLine = "v " + getStringFromDouble(vertices[i]->position.x) + " "  + getStringFromDouble(vertices[i]->position.y) + " " + getStringFromDouble(vertices[i]->position.z) + "\n";
+        myFile << verticeLine;
+    }
+    for (int i = 0; i < triangles.num; i++ ) {
+        int firstVertexIndex = getIndexForVertex(triangles[i]->vertex[0]); 
+        int secondVertexindex = getIndexForVertex(triangles[i]->vertex[1]); 
+        int thirdVertexindex = getIndexForVertex(triangles[i]->vertex[2]); 
+        myFile << "f " << firstVertexIndex << " " << secondVertexindex << " " << thirdVertexindex << "\n";
     }
     myFile.close();
 }
@@ -171,9 +184,11 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, Lis
     
     writeToFile();
     // reorder the map list based on the collapse ordering
+    /*
     for(int i=0;i<map.num;i++) {
         map[i] = (map[i]==-1)?0:permutation[map[i]];
     }
+    */
     // The caller of this function should reorder their vertices
     // according to the returned "permutation".
 }

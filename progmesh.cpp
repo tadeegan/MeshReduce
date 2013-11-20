@@ -125,8 +125,7 @@ Vertex *MinimumCostEdge(){
     return mn;
 }
 
-void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, 
-                     List<int> &map, List<int> &permutation)
+void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, List<int> &permutation , float percentage)
 {
     AddVertex(vert);  // put input data into our data structures
     AddFaces(tri);
@@ -134,7 +133,8 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri,
     permutation.SetSize(vertices.num);  // allocate space
     map.SetSize(vertices.num);          // allocate space
     // reduce the object down to nothing:
-    while(vertices.num > 0) {
+    int remaining = (int)((float)vertices.num * percentage);
+    while(vertices.num > remaining) {
         // get the next vertex to collapse
         Vertex *mn = MinimumCostEdge();
         std::cout << "min cost edge: " << mn << " num left: " << vertices.num <<  std::endl;
@@ -145,6 +145,7 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri,
         // Collapse this edge
         Collapse(mn,mn->collapse);
     }
+
     // reorder the map list based on the collapse ordering
     for(int i=0;i<map.num;i++) {
         map[i] = (map[i]==-1)?0:permutation[map[i]];

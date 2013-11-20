@@ -33,6 +33,6 @@ class tridata {
 };
 
 void ProgressiveMesh(List<Vector> &vert,  List<tridata> &tri, 
-                     List<int> &map,  List<int> &permutation );
+                     List<int> &map,  List<int> &permutation , float percentage);
 
 #endif

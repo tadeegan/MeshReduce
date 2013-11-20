@@ -116,7 +116,7 @@ int main () {
     std::cout << "decimating file" << std::endl;
 
     std::string line;
-    std::ifstream myfile ("box.obj");
+    std::ifstream myfile ("models/box.obj");
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )

@@ -1,9 +1,8 @@
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
 
-#include "vertex.h"
 #include "vector.h"
-
+#include "list.h"
 
 class Vertex;
 
@@ -17,4 +16,7 @@ class Triangle {
     void             ReplaceVertex(Vertex *vold,Vertex *vnew);
     int              HasVertex(Vertex *v);
 };
+
+extern List<Triangle *> triangles;
+
 #endif

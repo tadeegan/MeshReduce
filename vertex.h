@@ -20,4 +20,6 @@ class Vertex {
     void             RemoveIfNonNeighbor(Vertex *n);
 };
 
+extern List<Vertex *> vertices;
+
 #endif

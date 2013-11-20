@@ -110,13 +110,17 @@ void PermuteVertices(List<int> &permutation) {
     }
 }
 
-int main () {
+int main (int argc, char* argv[]) {
+    if(argc < 2){
+        printf("you need to specify a file\n");
+        exit(0);
+    }
     int numVerts = 1;
 
     //std::cout << "decimating file" << std::endl;
 
     std::string line;
-    std::ifstream myfile ("models/box.obj");
+    std::ifstream myfile (argv[1]);
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )

@@ -1,5 +1,0 @@
-what is permutation? 
-What are these lines?
-// keep track of this vertex, i.e. the collapse ordering
-permutation[mn->id]=vertices.num-1;
-

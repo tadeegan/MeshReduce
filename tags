@@ -4,9 +4,9 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Add	list.h	/^        void Add(Type t){$/;"	f	class:List
+Add	list.cpp	/^void List<Type>::Add(Type t) {$/;"	f	class:List
 AddFaces	progmesh.cpp	/^void AddFaces(List<tridata> &tri){$/;"	f
-AddUnique	list.h	/^            void AddUnique(Type t){$/;"	f	class:List
+AddUnique	list.cpp	/^void List<Type>::AddUnique(Type t) {$/;"	f	class:List
 AddVertex	progmesh.cpp	/^void AddVertex(List<Vector> &vert){$/;"	f
 CXX_OPTS	Makefile	/^CXX_OPTS =-c -g $(WARNINGS)$/;"	m
 Collapse	progmesh.cpp	/^void Collapse(Vertex *u,Vertex *v){$/;"	f
@@ -14,30 +14,30 @@ ComputeAllEdgeCollapseCosts	progmesh.cpp	/^void ComputeAllEdgeCollapseCosts() {$
 ComputeEdgeCollapseCost	progmesh.cpp	/^float ComputeEdgeCollapseCost(Vertex *u,Vertex *v) {$/;"	f
 ComputeEdgeCostAtVertex	progmesh.cpp	/^void ComputeEdgeCostAtVertex(Vertex *v) {$/;"	f
 ComputeNormal	triangle.cpp	/^void Triangle::ComputeNormal(){$/;"	f	class:Triangle
-Contains	list.h	/^        int Contains(Type t){$/;"	f	class:List
-DelIndex	list.h	/^        void DelIndex(int i){$/;"	f	class:List
+Contains	list.cpp	/^int List<Type>::Contains(Type t) {$/;"	f	class:List
+DelIndex	list.cpp	/^void List<Type>::DelIndex(int i) {$/;"	f	class:List
 EXEC	Makefile	/^EXEC =testing$/;"	m
 Face	Face.h	/^class Face{$/;"	c
 GENERIC_LIST_H	list.h	6;"	d
 GENERIC_VECTOR_H	vector.h	8;"	d
 HasVertex	triangle.cpp	/^int Triangle::HasVertex(Vertex *v) {$/;"	f	class:Triangle
-List	list.h	/^        List(){$/;"	f	class:List
-List	list.h	/^        List(int s){$/;"	f	class:List
+List	list.cpp	/^List<Type>::List() {$/;"	f	class:List
+List	list.cpp	/^List<Type>::List(int s) {$/;"	f	class:List
 List	list.h	/^class List {$/;"	c
 MinimumCostEdge	progmesh.cpp	/^Vertex *MinimumCostEdge(){$/;"	f
-OBJS	Makefile	/^OBJS =run.o vector.o vertex.o triangle.o list.o progmesh.o$/;"	m
+OBJS	Makefile	/^OBJS =run.o vector.o vertex.o triangle.o progmesh.o$/;"	m
 PROGRESSIVE_MESH_H	progmesh.h	19;"	d
-Pack	list.h	/^        void Pack(){$/;"	f	class:List
+Pack	list.cpp	/^void List<Type>::Pack() {$/;"	f	class:List
 PermuteVertices	run.cpp	/^void PermuteVertices(List<int> &permutation) {$/;"	f
 ProgressiveMesh	progmesh.cpp	/^void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, List<int> &permutation , float percentage)$/;"	f
 Quaternion	vector.h	/^	 Quaternion(){x=y=z=0.0f;r=1.0f;};$/;"	f	class:Quaternion
 Quaternion	vector.h	/^	 Quaternion(Vector v,float t){v=normalize(v);r=(float)cos(t\/2.0);v=v*(float)sin(t\/2.0);x=v.x;y=v.y;z=v.z;};$/;"	f	class:Quaternion
 Quaternion	vector.h	/^	 Quaternion(float _r,float _x,float _y,float _z){r=_r;x=_x;y=_y;z=_z;};$/;"	f	class:Quaternion
 Quaternion	vector.h	/^class Quaternion{$/;"	c
-Remove	list.h	/^        void Remove(Type t){$/;"	f	class:List
+Remove	list.cpp	/^void List<Type>::Remove(Type t) {$/;"	f	class:List
 RemoveIfNonNeighbor	vertex.cpp	/^void Vertex::RemoveIfNonNeighbor(Vertex *n) {$/;"	f	class:Vertex
 ReplaceVertex	triangle.cpp	/^void Triangle::ReplaceVertex(Vertex *vold,Vertex *vnew) {$/;"	f	class:Triangle
-SetSize	list.h	/^        void SetSize(int s){$/;"	f	class:List
+SetSize	list.cpp	/^void List<Type>::SetSize(int s) {$/;"	f	class:List
 TRIANGLE_H	triangle.h	2;"	d
 Triangle	triangle.cpp	/^Triangle::Triangle(Vertex *v0,Vertex *v1,Vertex *v2){$/;"	f	class:Triangle
 Triangle	triangle.h	/^class Triangle {$/;"	c
@@ -47,14 +47,14 @@ Vector	vector.h	/^class Vector {$/;"	c
 Vertex	vertex.cpp	/^Vertex::Vertex(Vector v,int _id) {$/;"	f	class:Vertex
 Vertex	vertex.h	/^class Vertex {$/;"	c
 WARNINGS	Makefile	/^WARNINGS =-Wfatal-errors -Werror -Wchar-subscripts -Wparentheses -Wreturn-type -Wmissing-braces -Wundef -Wshadow$/;"	m
-allocate	list.h	/^        void allocate(int s){$/;"	f	class:List
+allocate	list.cpp	/^void List<Type>::allocate(int s) {$/;"	f	class:List
 angle	vector.h	/^	 float angle(){return (float)(acos(r)*2.0);}$/;"	f	class:Quaternion
-array_size	list.h	/^        int array_size;$/;"	m	class:List
+array_size	list.h	/^        int array_size; Type &operator[](int i);$/;"	m	class:List
 axis	vector.h	/^	 Vector axis(){Vector a(x,y,z); return a*(float)(1\/sin(angle()\/2.0));}$/;"	f	class:Quaternion
 collapse	vertex.h	/^    Vertex *         collapse; \/\/ candidate vertex for collapse$/;"	m	class:Vertex
 comp	Makefile	/^comp =clang++$/;"	m
 concurrent	vector.cpp	/^int concurrent(Vector a,Vector b) {$/;"	f
-element	list.h	/^       Type * element;$/;"	m	class:List
+element	list.h	/^        Type * element;$/;"	m	class:List
 face	vertex.h	/^    List<Triangle *> face;     \/\/ adjacent triangles$/;"	m	class:Vertex
 getIndexForVertex	progmesh.cpp	/^int getIndexForVertex(const Vertex * vertex) {$/;"	f
 getStringFromDouble	progmesh.cpp	/^std::string getStringFromDouble(double num) {$/;"	f
@@ -85,7 +85,7 @@ operator -	vector.cpp	/^Quaternion operator-(Quaternion q) {$/;"	f
 operator -	vector.cpp	/^Vector operator-(Vector v)            {return Vector(-v.x,-v.y,-v.z);}$/;"	f
 operator -	vector.cpp	/^Vector operator-(Vector v1,Vector v2) {return Vector(v1.x-v2.x,v1.y-v2.y,v1.z-v2.z);}$/;"	f
 operator /	vector.cpp	/^Vector operator\/(Vector v1,float s)   {return v1*(1.0f\/s);}$/;"	f
-operator []	list.h	/^        Type &operator[](int i){assert(i>=0 && i<num); return element[i];}$/;"	f	class:List
+operator []	list.cpp	/^Type & List<Type>::operator[](int i) {$/;"	f	class:List
 operator ^	vector.cpp	/^float  operator^(Vector v1,Vector v2) {return v1.x*v2.x + v1.y*v2.y + v1.z*v2.z;}$/;"	f
 operator ^	vector.cpp	/^float operator^(Quaternion a,Quaternion b) {$/;"	f
 operator float *	vector.h	/^	operator float *() { return &x;};$/;"	f	class:Vector

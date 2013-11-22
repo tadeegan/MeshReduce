@@ -191,14 +191,6 @@ void ProgressiveMesh(List<Vector> &vert, List<tridata> &tri, List<int> &map, Lis
         fflush (stdout);
     }
     printf ("\r%f%% reducing .. done\n", 100.0);
-
     writeToFile();
-    // reorder the map list based on the collapse ordering
-    /*
-    for(int i=0;i<map.num;i++) {
-        map[i] = (map[i]==-1)?0:permutation[map[i]];
-    }
-    */
-    // The caller of this function should reorder their vertices
-    // according to the returned "permutation".
+
 }

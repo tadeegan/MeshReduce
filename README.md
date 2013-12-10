@@ -12,4 +12,4 @@ usage:
 
 ``$ make``
 
-``$ ./testing <filename> <percent deciamtion>``
+``$ ./testing <filename> <ratio deciamtion>``
